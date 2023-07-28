@@ -58,17 +58,17 @@ const Header = () => {
                 <a href="javascript:void(0)">Home</a>
               </li>
               <li className="text-white-500 hover:text-white-500 hover:text-lg">
-                <a href="javascript:void(0)">Projects</a>
+                <a href="javascript:void(0)">Sobre</a>
               </li>
               <li className="text-white-500 hover:text-white-500 hover:text-lg">
-                <a href="javascript:void(0)">About</a>
+                <a href="javascript:void(0)">Projetos</a>
               </li>
               <li className="text-white-500 hover:text-white-500 hover:text-lg">
-                <a href="javascript:void(0)">Contact</a>
+                <a href="javascript:void(0)">Contato</a>
               </li>
             </ul>
 
-            <div className="mt-3 space-y-2 lg:hidden md:inline-block">
+            <div className="mt-3 space-y-2 lg:hidden md:hidden md:inline-block">
               <a
                 href="#"
                 className="inline-block w-full px-4 py-2 text-center text-blue-500 bg-white-500 rounded-md shadow hover:bg-blue-500 hover:text-white-500"
