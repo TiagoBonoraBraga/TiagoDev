@@ -1,3 +1,4 @@
+
 const Footer = () => {
   return (
     <footer class="border-t border-blue-300 w-full  overflow-auto ">
@@ -111,6 +112,8 @@ const Footer = () => {
       <div class="flex justify-center ">
         <p class="text-xs text-blue-300 mb-1 ss:mb-2 ss:mt-5">
           All rights reserved by TiagoDev ©{new Date().getFullYear()}
+        
+
         </p>
       </div>
     </footer>
