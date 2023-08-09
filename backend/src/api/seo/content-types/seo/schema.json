@@ -4,7 +4,8 @@
   "info": {
     "singularName": "seo",
     "pluralName": "seos",
-    "displayName": "Seo"
+    "displayName": "Seo",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -16,9 +17,6 @@
     },
     "description": {
       "type": "richtext"
-    },
-    "image": {
-      "type": "string"
     }
   }
 }
