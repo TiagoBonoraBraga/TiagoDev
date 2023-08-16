@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import Layout from "@/components/templates/Layout";
-import {api} from '@/utils/api'
+
 
 import SeoHead from "@/components/organisms/SeoHead";
 // import ContactForm from "@/components/organisms/ContactForm";
@@ -15,6 +15,7 @@ export default function Home({ metaData }) {
     >
       <SeoHead />
       <Layout>  
+     
        
       </Layout>
     </main>

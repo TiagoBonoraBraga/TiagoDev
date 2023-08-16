@@ -72,7 +72,7 @@ export default function ContactForm() {
         <CustomLabel title="Email" />
         <input
           className="shadow-md appearance-none border rounded border-black-500 w-full py-2 px-3 text-black-500 leading-tight focus:outline-none focus:shadow-outline"
-          type="text"
+          type="email"
           id="name"
           value={email}
           onChange={(e) => {

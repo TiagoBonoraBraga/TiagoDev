@@ -18,6 +18,9 @@ export default function Contacts() {
   return (
   <div className=" flex flex-wrap justify-center items-center max-w-screen-xl px-0 xl:px-16 mx-auto gap-16 xs:gap-3 xs:mb-16 mt-20">
     <CardContacts contacts={contacts} />
+    <div>olá
+      
+    </div>
   </div>
   )
 }
