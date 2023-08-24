@@ -29,7 +29,7 @@ export const api = {
   getContacts: async () => {
     try {
       const response = await axios.get("/contacts");
-      return response.data
+      return response.data.data
     } catch (error) {
       console.error(err)
     }

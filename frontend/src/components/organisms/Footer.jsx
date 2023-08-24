@@ -1,7 +1,7 @@
 
 const Footer = () => {
   return (
-    <footer class="border-t border-blue-300 w-full  overflow-auto ">
+    <footer class="border-t border-blue-300 w-full overflow-auto ">
       <div
         class="
           container
