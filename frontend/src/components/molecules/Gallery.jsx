@@ -11,30 +11,21 @@ const Gallery = () => {
   const galleryTab = [
 // you can add more image if you want
     {
-      imageUrl: "https://themewagon.github.io/snapshot/images/model-1.jpg",
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/800px-Unofficial_JavaScript_logo_2.svg.png",
       type: "Nature",
       title: "Beautiful Work",
     },
     {
-      imageUrl: "https://themewagon.github.io/snapshot/images/model-2.jpg",
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png",
       type: "Nature",
       title: "Beautiful Work",
     },
     {
-      imageUrl: "https://themewagon.github.io/snapshot/images/model-3.jpg",
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png",
       type: "Nature",
       title: "Beautiful Work",
     },
-    {
-      imageUrl: "https://themewagon.github.io/snapshot/images/model-4.jpg",
-      type: "Nature",
-      title: "Beautiful Work",
-    },
-    {
-      imageUrl: "https://themewagon.github.io/snapshot/images/model-5.jpg",
-      type: "Nature",
-      title: "Beautiful Work",
-    },
+  
   ];
 
 
