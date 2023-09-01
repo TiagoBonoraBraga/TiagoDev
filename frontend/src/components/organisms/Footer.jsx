@@ -1,7 +1,7 @@
 
 const Footer = () => {
   return (
-    <footer class="border-t border-blue-300 w-full overflow-auto ">
+    <footer class="border-t border-blue-300 w-full overflow-auto bg-blue-300 ">
       <div
         class="
           container
@@ -25,20 +25,20 @@ const Footer = () => {
               justify-center
               text-4xl
               font-bold
-              text-blue-700
+              text-white-500
               md:justify-start
             "
           >
             Tiago Dev
           </a>
-          <p class="mt-5 mb-2 text-sm text-justify text-black-500 ss:flex ss:justify-center s:flex s:justify-start md:flex md:justify-start ">
+          <p class="mt-5 mb-2 text-sm text-justify text-white-500 ss:flex ss:justify-center s:flex s:justify-start md:flex md:justify-start ">
             O{" "}
-            <b style={{ color: "#3155c0" }} className="ml-1 mr-1">
+            <b style={{ color: "#000000" }} className="ml-1 mr-1">
               {" "}
               FUTURO{" "}
             </b>{" "}
             está em suas{" "}
-            <b style={{ color: "#3155c0" }} className="ml-1 mr-1">
+            <b style={{ color: "#000000" }} className="ml-1 mr-1">
               {" "}
               MÃOS{" "}
             </b>
@@ -49,18 +49,18 @@ const Footer = () => {
        
         <div class="justify-between w-full  text-center lg:flex flex flex-col items-end">
           <div class="w-full px-4 lg:w-1/3 md:w-1/2 ">
-            <h2 class="mt-5 mb-2 font-bold tracking-widest text-blue-300 uppercase">
+            <h2 class="mt-5 mb-2 font-bold tracking-widest text-white-500 uppercase">
               Contato
             </h2>
             <ul class="mb-2 space-y-2 text-sm list-none">
               <li className="">
                
-                <a class="text-black-500  hover:text-[110%]">
+                <a class="text-white-500  hover:text-[110%]">
                   ogait.desenvolvedor.jr@gmail.com
                 </a>
               </li>
               <li>
-                <a class="text-blue-300 hover:text-[110%]">
+                <a class="text-white-500 hover:text-[110%]">
                    41 - 98808-2384
                 </a>
               </li>
@@ -77,7 +77,7 @@ const Footer = () => {
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="0"
-                class="w-10 h-10 text-blue-500"
+                class="w-10 h-10 text-white-500"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -110,7 +110,7 @@ const Footer = () => {
         
       </div>
       <div class="flex justify-center ">
-        <p class="text-xs text-blue-300 mb-1 ss:mb-2 ss:mt-5">
+        <p class="text-xs text-white-500 mb-1 ss:mb-2 ss:mt-5">
           All rights reserved by TiagoDev ©{new Date().getFullYear()}
         
 
