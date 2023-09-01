@@ -8,10 +8,12 @@ import {
   imagens6,
 } from "@/utils/mocks";
 import CustomTitle from "../atoms/CustomTitle";
+// import Background from "@/components/atoms/Background";
 
 export default function BoxTech() {
   return (
     <section className="flex flex-row ss:flex ss:flex-col ss:justify-center ss:items-center  gap-5 justify-center  mb-10">
+       {/* <Background /> */}
       <div className="flex flex-col justify-center items-center mt-5 ring-2 ring-blue-100 bg-blue-200 bg-opacity-20 p-5 rounded-lg">
         <CustomTitle title="FRONTEND" />
         <div className="flex flex-row gap-3">

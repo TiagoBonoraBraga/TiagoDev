@@ -112,7 +112,6 @@ const Footer = () => {
       <div class="flex justify-center ">
         <p class="text-xs text-white-500 mb-1 ss:mb-2 ss:mt-5">
           All rights reserved by TiagoDev ©{new Date().getFullYear()}
-        
 
         </p>
       </div>

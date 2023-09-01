@@ -55,10 +55,10 @@ const Header = () => {
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               <li className="text-white-500 hover:text-white-500 hover:text-lg">
-                <a href="javascript:void(0)">Home</a>
+                <a href="/">Home</a>
               </li>
               <li className="text-white-500 hover:text-white-500 hover:text-lg">
-                <a href="javascript:void(0)">Sobre</a>
+                <a href="/about">Sobre</a>
               </li>
               <li className="text-white-500 hover:text-white-500 hover:text-lg">
                 <a href="javascript:void(0)">Projetos</a>
