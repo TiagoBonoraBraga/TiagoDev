@@ -16,6 +16,7 @@ import Express from "@/public/images/express.png";
 import Figma from "@/public/images/figma.png";
 import Miro from "@/public/images/miro.png";
 import Trello from "@/public/images/trello.png";
+import Fotoimage from "@/public/images/fotoimage.png";
 //frontend
 export const imagens = [
   {
@@ -93,5 +94,73 @@ export const imagens6 = [
   },
   {
     img6: Trello,
+  },
+];
+
+//mocks projects
+
+export const javascriptProjects = [
+  {
+    image: Fotoimage,
+    title: "FoodBox",
+    description:
+      "Projeto Cardápio Digital,  Είπε, κι εμάς μάς έκοψε μεμιάς τα ήπατά μας το μουγκρητό του το βαρύ    κι η όψη η γιγαντένια. Όμως του απολογήθηκα κι αυτά τα λόγια του είπα· Από την Τροία ερχόμαστε, Αχαιοί που μύριοι ανέμοι μάς πέταξαν στης θάλασσας τα τρίσβαθα τα πλάτια. Πατρίδα θέλαμε, κι αλλού μάς φέραν άλλοι δρόμοι· τέτοιο του Δία στάθηκε το θέλημα κι η γνώμη. Και λέμε απ' του Αγαμέμνονα του γιού του Ατρέα τ' ασκέρι πως είμαστε",
+    repository: "https://github.com/TiagoBonoraBraga/foodbox",
+    deploy: "www.foodbox.cia.tv",
+  },
+  {
+    image: Fotoimage,
+    title: "Jogo do Humor",
+    description: "Projeto Cardápio Digital,  Είπε, κι εμάς μάς έκοψε μεμιάς τα ήπατά μας το μουγκρητό του το βαρύ    κι η όψη η γιγαντένια. Όμως του απολογήθηκα κι αυτά τα λόγια του είπα· Από την Τροία ερχόμαστε, Αχαιοί που μύριοι ανέμοι μάς πέταξαν στης θάλασσας τα τρίσβαθα τα πλάτια. Πατρίδα θέλαμε, κι αλλού μάς φέραν άλλοι δρόμοι· τέτοιο του Δία στάθηκε το θέλημα κι η γνώμη. Και λέμε απ' του Αγαμέμνονα του γιού του Ατρέα τ' ασκέρι πως είμαστε",
+    repository: "https://github.com/TiagoBonoraBraga/modulo2proj1",
+    deploy: "www.jogodohumor.cia.tv",
+  },
+];
+
+export const reactProjects = [
+  {
+    image: "",
+    title: "",
+    description: "",
+    repository: "",
+    deploy: "",
+  },
+  {
+    image: "",
+    title: "",
+    description: "",
+    repository: "",
+    deploy: "",
+  },
+  {
+    image: "",
+    title: "",
+    description: "",
+    repository: "",
+    deploy: "",
+  },
+];
+
+export const nextProjects = [
+  {
+    image: "",
+    title: "",
+    description: "",
+    repository: "",
+    deploy: "",
+  },
+  {
+    image: "",
+    title: "",
+    description: "",
+    repository: "",
+    deploy: "",
+  },
+  {
+    image: "",
+    title: "",
+    description: "",
+    repository: "",
+    deploy: "",
   },
 ];
