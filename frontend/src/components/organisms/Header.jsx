@@ -61,10 +61,10 @@ const Header = () => {
                 <a href="/about">Sobre</a>
               </li>
               <li className="text-white-500 hover:text-white-500 hover:text-lg">
-                <a href="javascript:void(0)">Projetos</a>
+                <a href="/projects">Projetos</a>
               </li>
               <li className="text-white-500 hover:text-white-500 hover:text-lg">
-                <a href="javascript:void(0)">Contato</a>
+                <a href="/contact">Contato</a>
               </li>
             </ul>
 

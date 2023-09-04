@@ -1,4 +1,4 @@
-import CardContacts from "@/components/molecules/CardContacts";
+import CardContacts from "@/components/molecules/CardContact";
 import { useState, useEffect } from "react";
 import { api } from "@/utils/api";
 

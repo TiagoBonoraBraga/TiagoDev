@@ -1,4 +1,4 @@
-export default function CardContacts({ contact }) {  
+export default function CardContact({ contact }) {  
 
   return (
     <div className="flex flex-col  xs:flex-col   ">

@@ -1,8 +1,10 @@
 import { api } from "@/utils/api";
 import { useState } from "react";
+import Image from "next/image";
 import CustomButton from "../atoms/CustomButton";
 import CustomLabel from "../atoms/CustomLabel";
-import CardContacts from "@/components/molecules/CardContacts";
+import CustomTitle from "../atoms/CustomTitle";
+import Contact from '@/public/images/contact.jpg'
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -57,21 +59,29 @@ export default function ContactForm() {
   }
 
   return (
-    <div>
-     
-
-      <form className=" mt-40 flex flex-col" onSubmit={handleSubmit}>
-        <CustomLabel title="Nome" />
+    <section className="flex-row flex justify-center items-center gap-40 ss:flex-col ss:gap-5">
+      <div>
+        <Image 
+          src={Contact}
+          width={500}
+          height={500}
+          alt="About Picture"
+          // className="rounded-full"
+        />
+      </div>
+      <form className=" mt-20 ss:mt-0 flex flex-col ring-2 ring-blue-200 p-10 rounded-lg mb-20" onSubmit={handleSubmit}>
+      <CustomTitle title="Entre em contato comigo"/>
+        <CustomLabel title="Nome:" />
         <input
-          className="shadow-md appearance-none border rounded border-black-500 w-full py-2 px-3 text-black-500 leading-tight focus:outline-none focus:shadow-outline"
+          className="shadow-md appearance-none border rounded border-blue-200 w-full py-2 px-3 text-blue-200 leading-tight focus:outline-none focus:shadow-outline"
           type="text"
           id="name"
           value={name}
           onChange={handleNameChange}
         />
-        <CustomLabel title="Email" />
+        <CustomLabel title="E-mail:" />
         <input
-          className="shadow-md appearance-none border rounded border-black-500 w-full py-2 px-3 text-black-500 leading-tight focus:outline-none focus:shadow-outline"
+          className="shadow-md appearance-none border rounded border-blue-200 w-full py-2 px-3 text-blue-200 leading-tight focus:outline-none focus:shadow-outline"
           type="email"
           id="name"
           value={email}
@@ -79,25 +89,26 @@ export default function ContactForm() {
             setEmail(e.target.value);
           }}
         />
-        <CustomLabel title="Fone" />
+        <CustomLabel title="Fone:" />
         <input
-          className="shadow-md appearance-none border rounded border-black-500 w-full py-2 px-3 text-black-500 leading-tight focus:outline-none focus:shadow-outline"
+          className="shadow-md appearance-none border rounded border-blue-200 w-full py-2 px-3 text-blue-200 leading-tight focus:outline-none focus:shadow-outline"
           type="text"
           id="name"
           value={phone}
           onChange={handlePhoneChange}
         />
-        <CustomLabel title="Message" />
+        <CustomLabel title="Message:" />
         <textarea
-          className="shadow-md appearance-none border rounded border-black-500 w-full py-2 px-3 text-black-500 leading-tight focus:outline-none focus:shadow-outline"
+          className="shadow-md appearance-none border rounded border-blue-200 w-full py-2 px-3 text-blue-200 leading-tight focus:outline-none focus:shadow-outline"
           type="text"
           id="name"
           value={message}
           onChange={handleMessageChange}
+          rows={5}
         />
-        <CustomButton title="enviar" />
+        <CustomButton title="Enviar" />
       </form>
-    </div>
+    </section>
   );
 }
 

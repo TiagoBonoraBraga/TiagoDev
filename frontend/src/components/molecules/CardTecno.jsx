@@ -10,7 +10,7 @@ import {
 import CustomTitle from "../atoms/CustomTitle";
 // import Background from "@/components/atoms/Background";
 
-export default function BoxTech() {
+export default function CardTecno() {
   return (
     <section className="flex flex-row ss:flex ss:flex-col ss:justify-center ss:items-center  gap-5 justify-center  mb-10">
        {/* <Background /> */}

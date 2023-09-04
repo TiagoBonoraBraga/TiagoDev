@@ -2,7 +2,7 @@
 import SeoHead from "@/components/organisms/SeoHead";
 import Whatsapp from "@/components/atoms/Whatsapp";
 import SecondHeader from "@/components/molecules/SecondHeader";
-import BoxTech from "@/components/molecules/BoxTech";
+import CardTecno from "@/components/molecules/CardTecno";
 
 
 
@@ -15,10 +15,7 @@ export default function Home() {
     <>
       <SeoHead />
       <SecondHeader />  
-      <BoxTech />
-      
-     
-              
+      <CardTecno />              
       <Whatsapp />     
     </>
    
