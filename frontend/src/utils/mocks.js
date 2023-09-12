@@ -119,25 +119,25 @@ export const javascriptProjects = [
 
 export const reactProjects = [
   {
-    image: "",
-    title: "",
-    description: "",
-    repository: "",
-    deploy: "",
+    image: Fotoimage,
+    title: "El-Geladon",
+    description: "Projeto Cardápio Digital,  Είπε, κι εμάς μάς έκοψε μεμιάς τα ήπατά μας το μουγκρητό του το βαρύ    κι η όψη η γιγαντένια. Όμως του απολογήθηκα κι αυτά τα λόγια του είπα· Από την Τροία ερχόμαστε, Αχαιοί που μύριοι ανέμοι μάς πέταξαν στης θάλασσας τα τρίσβαθα τα πλάτια. Πατρίδα θέλαμε, κι αλλού μάς φέραν άλλοι δρόμοι· τέτοιο του Δία στάθηκε το θέλημα κι η γνώμη. Και λέμε απ' του Αγαμέμνονα του γιού του Ατρέα τ' ασκέρι πως είμαστε",
+    repository: "https://github.com/TiagoBonoraBraga/modulo2proj1",
+    deploy: "www.jogodohumor.cia.tv",
   },
   {
-    image: "",
-    title: "",
-    description: "",
-    repository: "",
-    deploy: "",
+    image: Fotoimage,
+    title: "Pizza fresh",
+    description: "Projeto Cardápio Digital,  Είπε, κι εμάς μάς έκοψε μεμιάς τα ήπατά μας το μουγκρητό του το βαρύ    κι η όψη η γιγαντένια. Όμως του απολογήθηκα κι αυτά τα λόγια του είπα· Από την Τροία ερχόμαστε, Αχαιοί που μύριοι ανέμοι μάς πέταξαν στης θάλασσας τα τρίσβαθα τα πλάτια. Πατρίδα θέλαμε, κι αλλού μάς φέραν άλλοι δρόμοι· τέτοιο του Δία στάθηκε το θέλημα κι η γνώμη. Και λέμε απ' του Αγαμέμνονα του γιού του Ατρέα τ' ασκέρι πως είμαστε",
+    repository: "https://github.com/TiagoBonoraBraga/modulo2proj1",
+    deploy: "www.jogodohumor.cia.tv",
   },
   {
-    image: "",
-    title: "",
-    description: "",
-    repository: "",
-    deploy: "",
+    image: Fotoimage,
+    title: "Old-Games",
+    description: "Projeto Cardápio Digital,  Είπε, κι εμάς μάς έκοψε μεμιάς τα ήπατά μας το μουγκρητό του το βαρύ    κι η όψη η γιγαντένια. Όμως του απολογήθηκα κι αυτά τα λόγια του είπα· Από την Τροία ερχόμαστε, Αχαιοί που μύριοι ανέμοι μάς πέταξαν στης θάλασσας τα τρίσβαθα τα πλάτια. Πατρίδα θέλαμε, κι αλλού μάς φέραν άλλοι δρόμοι· τέτοιο του Δία στάθηκε το θέλημα κι η γνώμη. Και λέμε απ' του Αγαμέμνονα του γιού του Ατρέα τ' ασκέρι πως είμαστε",
+    repository: "https://github.com/TiagoBonoraBraga/modulo2proj1",
+    deploy: "www.jogodohumor.cia.tv",
   },
 ];
 
