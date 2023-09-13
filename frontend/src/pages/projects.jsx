@@ -1,4 +1,4 @@
-import CardProject from "@/components/molecules/CardProject";
+import CardProject from "@/components/organisms/CardProject";
 import SeoHead from "@/components/organisms/SeoHead";
 
 export default function Projects(){
