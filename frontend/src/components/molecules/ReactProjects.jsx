@@ -5,13 +5,17 @@ export default function ReactProject(){
     return (
         <>
         <h2 className="flex justify-center mt-10 text-lg font-extrabold">Projetos React.js</h2>
+        <div className="flex flex-row justify-center items-center w-2/3 gap-5">
+
+
+
          {reactProjects.map((reactProject, index) => 
-        <div key={index} className="flex flex-row w-2/3  ss:flex ss:flex-col ss:max-w-sm ring-2 mt-3 mb-10 ring-blue-200 bg-blue-100 bg-opacity-25 rounded-lg ">
+        <div key={index} className="flex flex-col w-2/3  ss:flex ss:flex-col ss:max-w-sm ring-2 mt-3 mb-10 ring-blue-200 bg-blue-100 bg-opacity-25 rounded-lg ">
           <div className="flex justify-center items-center p-3">
             <Image
                 src={reactProject.image}
-                width={800}
-                height={800}
+                width={200}
+                height={200}
                 alt="Project"
                 className="rounded"
             />
@@ -31,6 +35,7 @@ export default function ReactProject(){
           </div>
         </div>
         )}
+        </div>
         </>
     )
 }
