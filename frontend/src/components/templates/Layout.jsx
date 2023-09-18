@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <main className="min-h-[65vh] overflow-hidden">{children}</main>
+     {children}
       <Footer />
     </>
   );

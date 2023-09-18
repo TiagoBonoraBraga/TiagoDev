@@ -1,11 +1,14 @@
 import CardAbout from "@/components/molecules/CardAbout";
 import SeoHead from "@/components/organisms/SeoHead";
+import Layout from "@/components/templates/Layout";
 
 export default function About() {
   return (
     <>
-    <SeoHead />
-      <CardAbout />
+      <Layout>
+        <SeoHead />
+        <CardAbout />
+      </Layout>
     </>
   );
 }
