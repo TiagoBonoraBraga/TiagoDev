@@ -1,6 +1,7 @@
 import ReactProjects from "@/components/molecules/ReactProjects";
 import VanillaProjects from "../molecules/VanillaProjects";
 import NextProjects from "../molecules/NextProjects";
+import BackendProjects from "../molecules/BackendProjects";
 
 export default function CardProject() {
   return (
@@ -9,6 +10,7 @@ export default function CardProject() {
         <VanillaProjects />
         <ReactProjects />
         <NextProjects />
+        <BackendProjects />
       </section>
     </>
   );
