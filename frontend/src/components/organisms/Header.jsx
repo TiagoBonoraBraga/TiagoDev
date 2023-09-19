@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from 'next/link'
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
   return (
@@ -68,14 +69,14 @@ const Header = () => {
               </li>
             </ul>
 
-            <div className="mt-3 space-y-2 lg:hidden md:hidden md:inline-block">
-              <a
-                href="#"
+            <button className="mt-3 space-y-2 lg:hidden md:hidden md:inline-block">
+              <Link
+                href="/login"
                 className="inline-block w-full px-4 py-2 text-center text-blue-500 bg-white-500 rounded-md shadow hover:bg-blue-500 hover:text-white-500"
               >
                 Login
-              </a>
-            </div>
+              </Link>
+            </button>
           </div>
         </div>
         <div className="hidden space-x-2 md:inline-block">

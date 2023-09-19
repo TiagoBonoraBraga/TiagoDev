@@ -104,7 +104,7 @@ export const javascriptProjects = [
     image: Fotoimage,
     title: "FoodBox",
     description:
-      "Projeto Cardápio Digital,  Είπε, κι εμάς μάς έκοψε μεμιάς τα ήπατά μας το μουγκρητό του το βαρύ    κι η όψη η γιγαντένια. Όμως του απολογήθηκα κι αυτά τα λόγια του είπα· Από την Τροία ερχόμαστε, Αχαιοί που μύριοι ανέμοι μάς πέταξαν στης θάλασσας τα τρίσβαθα τα πλάτια. Πατρίδα θέλαμε, κι αλλού μάς φέραν άλλοι δρόμοι· τέτοιο του Δία στάθηκε το θέλημα κι η γνώμη. Και λέμε απ' του Αγαμέμνονα του γιού του Ατρέα τ' ασκέρι πως είμαστε",
+      "Projeto Cardápio Digital - Projeto desenvolvido através da aulas do Mestre Gustavo Guanabara do canal Curso em Video no youtube - O FoodBox foi desenvolvido totalmente na linguagem Javascript Vanilla, visando aprimorar meus conhecimentos na linguagem pura. Na estilização do projeto foi utilizado css 3 e também foi feita a integração dos pedidos através de mensagens via whatsapp.",
     repository: "https://github.com/TiagoBonoraBraga/foodbox",
     deploy: "www.foodbox.cia.tv",
   },
