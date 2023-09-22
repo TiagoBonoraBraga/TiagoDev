@@ -5,7 +5,7 @@ export default function LoginForm() {
         <>
            
             
-                <div class="flex flex-col items-center justity-center w-full mt-40 ss:pt-20 ">
+                <div class="flex flex-col items-center justity-center w-full mt-40  ">
                     <div class="flex justify-center items-center w-full mt-20 mr-0 mb-0 ml-0 relative z-10 max-w-2xl lg:mt-0 lg:w-5/12">
                         <div
                             class="flex flex-col items-start justify-start pt-10 pr-10 pb-10 pl-10 bg-white shadow-2xl rounded-xl
