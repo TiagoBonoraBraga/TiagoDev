@@ -3,16 +3,9 @@ import CustomLabel from "@/components/atoms/CustomLabel";
 export default function LoginForm() {
     return (
         <>
-            {/* <div class="w-full bg-cover relative max-w-md lg:max-w-2xl lg:w-7/12">
-  <div class="flex flex-col items-center justify-center w-full h-full relative lg:pr-10"> */}
-            {/* <img src="https://res.cloudinary.com/macxenon/image/upload/v1631570592/Run_-_Health_qcghbu.png" class="btn-"/> */}
-            {/* </div>
-</div> */}
-            <div
-                class="flex flex-col items-center justify-center pt-0 pr-10 pb-0 pl-10 mt-0 mr-auto mb-0 ml-auto max-w-7xl
-      xl:px-5 lg:flex-row"
-            >
-                <div class="flex flex-col items-center justity-center w-full pt-5 pr-10 pb-20 pl-10 lg:pt-20 lg:flex-row">
+           
+            
+                <div class="flex flex-col items-center justity-center w-full mt-40 ss:pt-20 ">
                     <div class="flex justify-center items-center w-full mt-20 mr-0 mb-0 ml-0 relative z-10 max-w-2xl lg:mt-0 lg:w-5/12">
                         <div
                             class="flex flex-col items-start justify-start pt-10 pr-10 pb-10 pl-10 bg-white shadow-2xl rounded-xl
@@ -55,7 +48,7 @@ export default function LoginForm() {
                         </div>
                     </div>
                 </div>
-            </div>
+        
         </>
     )
 }
