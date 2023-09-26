@@ -111,7 +111,7 @@ export const javascriptProjects = [
   {
     image: Fotoimage,
     title: "Jogo do Humor",
-    description: "Projeto Cardápio Digital,  Είπε, κι εμάς μάς έκοψε μεμιάς τα ήπατά μας το μουγκρητό του το βαρύ    κι η όψη η γιγαντένια. Όμως του απολογήθηκα κι αυτά τα λόγια του είπα· Από την Τροία ερχόμαστε, Αχαιοί που μύριοι ανέμοι μάς πέταξαν στης θάλασσας τα τρίσβαθα τα πλάτια. Πατρίδα θέλαμε, κι αλλού μάς φέραν άλλοι δρόμοι· τέτοιο του Δία στάθηκε το θέλημα κι η γνώμη. Και λέμε απ' του Αγαμέμνονα του γιού του Ατρέα τ' ασκέρι πως είμαστε",
+    description: "Projeto Jogo do Humor - Projeto desenvolvido no módulo 2 do curso de  Desenvolvimento Fullstack da Blue Ed.Tech.  O Jogo do Humor foi desenvolvido totalmente na linguagem Javascript Vanilla, visando aprimorar meus conhecimentos na linguagem pura. Na estilização do projeto foi utilizado css 3. O jogo consiste em fazer a manipulação do DOM trocando a imagem e o humor do Peco The Cat através da ação do botão.",
     repository: "https://github.com/TiagoBonoraBraga/modulo2proj1",
     deploy: "www.jogodohumor.cia.tv",
   },

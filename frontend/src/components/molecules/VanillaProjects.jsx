@@ -31,16 +31,18 @@ export default function VanillaProjects() {
               </p>
 
               <Link
-                href="https://github.com/TiagoBonoraBraga/TiagoDev"
+                href={javascriptProject.repository}
                 className="flex justify-center items-center mb-3"
+                Target="_blank"
               >
-                Repositório GitHub
+                GitHub - Repositório
               </Link>
               <Link
                 href="https://www.foodbox.cia.tv"
+                Target="_blank"
                 className="flex justify-center items-center mb-3"
               >
-                www.foodbox.cia.tv
+                {javascriptProject.deploy}
               </Link>
             </div>
           </div>
