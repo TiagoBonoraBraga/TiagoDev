@@ -174,3 +174,20 @@ export const backendProjects = [
     deploy: "www.jogodohumor.cia.tv",
   }
 ]
+
+export const wordpressProjects = [
+  {
+    image: Fotoimage,
+    title: "Click Sushi",
+    description: "Projeto Cardápio Digital - Click Sushi,  Είπε, κι εμάς μάς έκοψε μεμιάς τα ήπατά μας το μουγκρητό του το βαρύ    κι η όψη η γιγαντένια. Όμως του απολογήθηκα κι αυτά τα λόγια του είπα· Από την Τροία ερχόμαστε, Αχαιοί που μύριοι ανέμοι μάς πέταξαν στης θάλασσας τα τρίσβαθα τα πλάτια. Πατρίδα θέλαμε, κι αλλού μάς φέραν άλλοι δρόμοι· τέτοιο του Δία στάθηκε το θέλημα κι η γνώμη. Και λέμε απ' του Αγαμέμνονα του γιού του Ατρέα τ' ασκέρι πως είμαστε",
+    repository: "https://github.com/TiagoBonoraBraga/modulo2proj1",
+    deploy: "www.sushiclick.com.br",
+  },
+  {
+    image: Fotoimage,
+    title: "Espaço da Bola",
+    description: "Projeto Espaço da Bola,  Είπε, κι εμάς μάς έκοψε μεμιάς τα ήπατά μας το μουγκρητό του το βαρύ    κι η όψη η γιγαντένια. Όμως του απολογήθηκα κι αυτά τα λόγια του είπα· Από την Τροία ερχόμαστε, Αχαιοί που μύριοι ανέμοι μάς πέταξαν στης θάλασσας τα τρίσβαθα τα πλάτια. Πατρίδα θέλαμε, κι αλλού μάς φέραν άλλοι δρόμοι· τέτοιο του Δία στάθηκε το θέλημα κι η γνώμη. Και λέμε απ' του Αγαμέμνονα του γιού του Ατρέα τ' ασκέρι πως είμαστε",
+    repository: "https://github.com/TiagoBonoraBraga/modulo2proj1",
+    deploy: "www.espacodabola.com.br",
+  }
+]
