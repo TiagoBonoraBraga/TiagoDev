@@ -26,7 +26,7 @@ export default function CardAbout() {
              <p className="text-gray-700 text-base text-justify">
               Me chamo Tiago Bonora Braga tenho 39 anos sou casado em moro em Curitiba,
             venho de uma familia bem estruturada, o que me deu a oportunidade de focar nos estudos
-            desde cedo, entrei na faculdade de Ed.Fisica ja com 17 anos e me formei com 21 anos, após
+            desde cedo, entrei na faculdade de Ed.Fisica com 17 anos e me formei aos 21, após
             esse período tambêm realizei uma pós-graduação na área e trabalhei por 8 anos com musculação
             e ed. especial como Pss - processo seleção simplificado Estado do Paraná.
               Após esse período ja em 2012 comecei a sentir que o crescimento na área da ed. fisica estava limitado a aulas em academias e personal, 
