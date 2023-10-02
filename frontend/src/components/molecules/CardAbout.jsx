@@ -25,14 +25,14 @@ export default function CardAbout() {
              </div>
              <p className="text-gray-700 text-base text-justify">
               Me chamo Tiago Bonora Braga tenho 39 anos sou casado em moro em Curitiba - Pr,
-            venho de uma familia bem estruturada, o que me deu a oportunidade de focar nos estudos
-            desde cedo, entrei na faculdade de Ed.Fisica com 17 anos e me formei aos 21, após
+            venho de uma familia bem estruturada o que me deu a oportunidade de focar nos estudos
+            desde cedo. Entrei na faculdade de Ed.Fisica com 17 anos e me formei aos 21, após
             esse período tambêm realizei uma pós-graduação na área e trabalhei por 8 anos com musculação
             e ed. especial como Pss - processo seleção simplificado Estado do Paraná.
               Após esse período ja em 2012 comecei a sentir que o crescimento na área da ed. fisica estava limitado a aulas em academias e personal, 
             e mesmo tendo especialização ainda continuava com a mesma remuneração de pessoas que nao tinham o mesmo grau de formação.
               Por esse motivo tive a oportunidade de mudar, agora para a área de vendas visando uma melhor colocação salarial. 
-              Abri uma empresa de vendas de pisos laminado em Curitiba, pois minha familia vem desta área de vendas de artefatos para casa, chegando a ter 3 funcionários,
+              Abri uma empresa de vendas de pisos laminado em Curitiba, pois minha família vem desta área de artefatos para casa chegando a ter 3 funcionários,
             essa experiência foi muito válida pois tive a oportunidade de gerenciar uma equipe e aprender muito com essa experiência, assim conseguindo atingir o lucro que desejava.
               Em 2016 quando começou a crise na área de serviços no Brasil, sendo muito difícil obter os lucros que estava tendo anteriormente, resolvi voltar a um sonho antigo que foi minha segunda
             opção quando entrei na faculdade de ed.fisica, a área de T.I..
