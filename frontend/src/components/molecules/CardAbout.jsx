@@ -24,7 +24,7 @@ export default function CardAbout() {
                Tiago Bonora Braga - Desenvolvedor FullStack
              </div>
              <p className="text-gray-700 text-base text-justify">
-              Me chamo Tiago Bonora Braga tenho 39 anos sou casado em moro em Curitiba,
+              Me chamo Tiago Bonora Braga tenho 39 anos sou casado em moro em Curitiba - Pr,
             venho de uma familia bem estruturada, o que me deu a oportunidade de focar nos estudos
             desde cedo, entrei na faculdade de Ed.Fisica com 17 anos e me formei aos 21, após
             esse período tambêm realizei uma pós-graduação na área e trabalhei por 8 anos com musculação
