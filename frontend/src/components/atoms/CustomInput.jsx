@@ -1,4 +1,4 @@
-export default function CustomInput(id, type, onChange, value, ...props) {
+export default function CustomInput(id, type, onChange, value, placeholder, ...props) {
     return (
         <>
             <input
@@ -7,6 +7,7 @@ export default function CustomInput(id, type, onChange, value, ...props) {
                 value={value}
                 type={type}
                 onChange={onChange}
+                placeholder={placeholder}
                 {...props}
             />
         </>
