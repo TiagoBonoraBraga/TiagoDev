@@ -2,7 +2,7 @@ export default function CustomInput(id, type, onChange, value, placeholder, ...p
     return (
         <>
             <input
-                className="shadow-md appearance-none border rounded border-blue-200 w-full py-2 px-3 text-blue-200 leading-tight focus:outline-none focus:shadow-outline"
+                className="w-72 ss:w-60 py-2 flex justify-center items-center border-blue-200 text-blue-200  leading-tight shadow-md appearance-none border rounded focus:outline-none focus:shadow-outline"
                 id={id}
                 value={value}
                 type={type}

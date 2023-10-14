@@ -3,7 +3,7 @@ import CustomInput from "../atoms/CustomInput"
 
 import CustomButton from "../atoms/CustomButton";
 
-export default function AdminFormFrontend() {
+export default function AdminFormBackend() {
 
     const [img, setImg] = useState('');
 
@@ -14,7 +14,7 @@ export default function AdminFormFrontend() {
     return (
         <>
             <CustomInput
-                id="frontend"
+                id="Backend"
                 value={img}
                 type="text"
                 onChange={handleClick}
