@@ -1,5 +1,7 @@
 import { useState } from "react";
-import Link from 'next/link'
+import Link from 'next/link';
+import CustomLogo from "@/components/atoms/CustomLogo";
+
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
   return (
@@ -7,9 +9,7 @@ const Header = () => {
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <a href="/">
-              <h2 className="text-2xl font-bold text-white-500">Tiago Dev</h2>
-            </a>
+            <CustomLogo />
             <div className="md:hidden">
               <button
                 className="p-2 text-white-500 rounded-md outline-none focus:border-white-500 focus:border"
@@ -50,9 +50,8 @@ const Header = () => {
         </div>
         <div>
           <div
-            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-              navbar ? "block" : "hidden"
-            }`}
+            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"
+              }`}
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               <li className="text-white-500 hover:text-white-500 hover:text-lg">
