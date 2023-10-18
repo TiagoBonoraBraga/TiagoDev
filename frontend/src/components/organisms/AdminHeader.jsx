@@ -66,7 +66,7 @@ export default function AdminHeader() {
                                 href="/login"
                                 className="inline-block w-full px-4 py-2 text-center text-blue-500 bg-white-500 rounded-md shadow hover:bg-blue-500 hover:text-white-500"
                             >
-                                Login
+                                Login Admin
                             </Link>
                         </button>
                     </div>
