@@ -7,7 +7,6 @@ export default function AdminFormFrontend() {
 
     const [img, setImg] = useState('');
 
-
     function handleSubmit(e) {
         e.preventDefault();
 
@@ -18,18 +17,17 @@ export default function AdminFormFrontend() {
     }
     return (
         <>
-        <form className="w-auto ss:w-60 py-1 flex justify-center items-center gap-2" onSubmit={handleSubmit}>
-            <CustomInput
-                id="frontend"
-                value={img}
-                name="frontend"
-                type="text"
-                setValue={setImg}
-                placeholder="Insira o endereço da imagem aqui!"
-            />
-            {img}
-            <CustomButton title="enviar" />
-        </form>
+            <form className="w-auto ss:w-60 py-1 flex justify-center items-center gap-2 ss:flex ss:flex-col" onSubmit={handleSubmit}>
+                <CustomInput
+                    id="frontend"
+                    value={img}
+                    name="frontend"
+                    type="text"
+                    setValue={setImg}
+                    placeholder="Insira o endereço da imagem aqui!"
+                />
+                <CustomButton title="Cadastrar" />
+            </form>
         </>
     )
 }

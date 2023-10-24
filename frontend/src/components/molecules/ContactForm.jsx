@@ -83,7 +83,7 @@ export default function ContactForm() {
         <input
           className="shadow-md appearance-none border rounded border-blue-200 w-full py-2 px-3 text-blue-200 leading-tight focus:outline-none focus:shadow-outline"
           type="email"
-          id="name"
+          id="email"
           value={email}
           onChange={(e) => {
             setEmail(e.target.value);
@@ -93,7 +93,7 @@ export default function ContactForm() {
         <input
           className="shadow-md appearance-none border rounded border-blue-200 w-full py-2 px-3 text-blue-200 leading-tight focus:outline-none focus:shadow-outline"
           type="text"
-          id="name"
+          id="phone"
           value={phone}
           onChange={handlePhoneChange}
         />
@@ -101,7 +101,7 @@ export default function ContactForm() {
         <textarea
           className="shadow-md appearance-none border rounded border-blue-200 w-full py-2 px-3 text-blue-200 leading-tight focus:outline-none focus:shadow-outline"
           type="text"
-          id="name"
+          id="message"
           value={message}
           onChange={handleMessageChange}
           rows={5}
