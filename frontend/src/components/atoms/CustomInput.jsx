@@ -11,9 +11,7 @@ export default function CustomInput({id, type, onChange, name, value, placeholde
                     setValue(e.target.value);
                     onChange && onChange(e);
                   }}
-                placeholder={placeholder}
-            
-               
+                placeholder={placeholder}              
                
             />
         </>
