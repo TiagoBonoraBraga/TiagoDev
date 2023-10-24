@@ -8,19 +8,27 @@ export default function AdminFormBackend() {
     const [img, setImg] = useState('');
 
 
-    function handleClick() {
-        return (<></>)
+    function handleSubmit(e) {
+        e.preventDefault();
+        const backendPayload = {
+            image: img,
+        }
+        console.log("back", backendPayload);
     }
     return (
         <>
+        <form className="w-auto ss:w-60 py-1 flex justify-center items-center gap-2 ss:flex ss:flex-col" onSubmit={handleSubmit}>
             <CustomInput
                 id="Backend"
                 value={img}
                 type="text"
-                onChange={handleClick}
-                placeholder="Insira o endereço da imagem aqui!"
+                name="backend"
+                setValue={setImg}
+                placeholder="Endereço da imagem aqui!"
+                
             />
             <CustomButton title="enviar" />
+        </form>
         </>
     )
 }
