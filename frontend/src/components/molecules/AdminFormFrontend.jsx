@@ -24,7 +24,7 @@ export default function AdminFormFrontend() {
                     name="frontend"
                     type="text"
                     setValue={setImg}
-                    placeholder="Insira o endereço da imagem aqui!"
+                    placeholder="Endereço da imagem aqui!"
                 />
                 <CustomButton title="Cadastrar" />
             </form>
