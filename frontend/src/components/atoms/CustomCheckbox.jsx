@@ -1,15 +1,18 @@
-export default function CustomCheckbox({id, name, value, type, onChange, ...props}) {
+export default function CustomCheckbox({ id, name, value, setValue, type, onChange }) {
     return (
         <>
             <input
-                 className="flex justify-center items-center ml-4"
+                className="flex justify-center items-center ml-4"
                 id={id}
                 name={name}
                 value={value}
                 type={type}
-                onChange={onChange}
-                props={props}
-                
+                onChange={(e) => {
+                    setValue(e.target.value);
+                    onChange && onChange(e);
+                }}
+              
+
             />
         </>)
 }

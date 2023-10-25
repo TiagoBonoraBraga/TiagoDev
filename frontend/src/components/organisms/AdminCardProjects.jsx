@@ -18,25 +18,42 @@ export default function AdminCardProjects() {
     const [backend, setBackend] = useState('');
     const [wordpress, setWordpress] = useState('');
 
-
+    function handleSubmit(e){
+        e.preventDefault();
+        const projectsPayload = {
+            title: title,
+            image: img,
+            description: description,
+            repository: repository,
+            deploy: deploy,
+            next: next,
+            react: react,
+            javascript: javascript,
+            backend: backend,
+            wordpress: wordpress,
+        }
+        console.log("projects", projectsPayload )
+    }
     return (
         <>
-            <form className="flex flex-col gap-2 mb-10 mt-10 ring-1 ring-blue-200 p-5 ss:p-0.5 rounded-sm ss:flex ss:justify-center ss:items-center">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-2 mb-10 mt-10 ring-1 ring-blue-200 p-5 ss:p-0.5 rounded-sm ss:flex ss:justify-center ss:items-center">
                 <CustomTitle title="ADICIONAR PROJETOS" />
-                <CustomLabel title="Imagem do Projeto" />
+                <CustomLabel title="Título do Projeto" />
                 <CustomInput
                     id="title"
                     value={title}
                     type="text"
-                    onChange={(e) => { }}
-                    placeholder="Insira o endereço da imagem aqui!"
+                    name="title"
+                    setValue={setTitle}
+                    placeholder="Insira o título do projeto aqui!"
                 />
-                <CustomLabel title="Titulo do Projeto" />
+                <CustomLabel title="Imagem do Projeto" />
                 <CustomInput
                     id="image"
                     value={img}
                     type="text"
-                    onChange={(e) => { }}
+                    name="image"
+                    setValue={setImg}
                     placeholder="Insira o endereço da imagem aqui!"
                 />
                 <CustomLabel title="Descrição do Projeto" />
@@ -44,24 +61,26 @@ export default function AdminCardProjects() {
                     id="description"
                     value={description}
                     type="text"
-                    onChange={(e) => { }}
-                    placeholder="Insira o endereço da imagem aqui!"
+                    name="description"
+                    setValue={setDescription}
+                    placeholder="Insira a descrição do projeto aqui!"
                 />
                 <CustomLabel title="Repositório do Projeto" />
                 <CustomInput
                     id="repository"
                     value={repository}
                     type="text"
-                    onChange={(e) => { }}
-                    placeholder="Insira o endereço da imagem aqui!"
+                    name="repository"
+                    setValue={setRepository}
+                    placeholder="Insira o repositório do projeto aqui!"
                 />
                 <CustomLabel title="Deploy do Projeto" />
                 <CustomInput
                     id="deploy"
                     value={deploy}
                     type="text"
-                    onChange={(e) => { }}
-                    placeholder="Insira o endereço da imagem aqui!"
+                    setValue={setDeploy}
+                    placeholder="Insira o deploy do projeto aqui!"
                 />
                 <div className="flex flex-row gap-5">
                     <div className="flex flex-col justify-start items-start">
@@ -71,7 +90,7 @@ export default function AdminCardProjects() {
                             name="next"
                             value={next}
                             type="checkbox"
-                            onChange={(e) => { }}
+                            setValue={setNext}
                         />
                     </div>
                     <div className="flex flex-col justify-start items-start">
@@ -81,7 +100,7 @@ export default function AdminCardProjects() {
                             name="react"
                             value={react}
                             type="checkbox"
-                            onChange={(e) => { }}
+                            setValue={setReact}
                         />
                     </div>
                     <div className="flex flex-col justify-start items-start">
@@ -91,7 +110,7 @@ export default function AdminCardProjects() {
                             name="javascript"
                             value={javascript}
                             type="checkbox"
-                            onChange={(e) => { }}
+                            setValue={setJavascript}
 
                         />
                     </div>
@@ -102,7 +121,7 @@ export default function AdminCardProjects() {
                             name="backend"
                             value={backend}
                             type="checkbox"
-                            onChange={(e) => { }}
+                            setValue={setBackend}
 
                         />
                     </div>
@@ -115,7 +134,7 @@ export default function AdminCardProjects() {
                         name="wordpress"
                         value={wordpress}
                         type="checkbox"
-                        onChange={(e) => { }}
+                        setValue={setWordpress}
 
                     />
                 </div>
