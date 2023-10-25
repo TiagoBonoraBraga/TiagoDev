@@ -5,6 +5,7 @@ import CustomButton from "../atoms/CustomButton";
 import CustomLabel from "../atoms/CustomLabel";
 import CustomTitle from "../atoms/CustomTitle";
 import Contact from '@/public/images/contact.jpg'
+import CustomInput from "../atoms/CustomInput";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -72,29 +73,32 @@ export default function ContactForm() {
       <form className=" mt-20 ss:mt-0 flex flex-col ring-2 ring-blue-200 p-10 rounded-lg mb-20" onSubmit={handleSubmit}>
       <CustomTitle title="Entre em contato comigo"/>
         <CustomLabel title="Nome:" />
-        <input
+        <CustomInput
           className="shadow-md appearance-none border rounded border-blue-200 w-full py-2 px-3 text-blue-200 leading-tight focus:outline-none focus:shadow-outline"
           type="text"
           id="name"
           value={name}
+          setValue={setName}
           onChange={handleNameChange}
         />
         <CustomLabel title="E-mail:" />
-        <input
+        <CustomInput
           className="shadow-md appearance-none border rounded border-blue-200 w-full py-2 px-3 text-blue-200 leading-tight focus:outline-none focus:shadow-outline"
           type="email"
           id="email"
           value={email}
+          setValue={setEmail}
           onChange={(e) => {
             setEmail(e.target.value);
           }}
         />
         <CustomLabel title="Fone:" />
-        <input
+        <CustomInput
           className="shadow-md appearance-none border rounded border-blue-200 w-full py-2 px-3 text-blue-200 leading-tight focus:outline-none focus:shadow-outline"
           type="text"
           id="phone"
           value={phone}
+          setValue={setPhone}
           onChange={handlePhoneChange}
         />
         <CustomLabel title="Message:" />
