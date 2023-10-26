@@ -1,19 +1,23 @@
 import { useState } from "react"
 import CustomInput from "../atoms/CustomInput"
-
+import { api } from "@/utils/api"
 import CustomButton from "../atoms/CustomButton";
+
 
 export default function AdminFormFrontend() {
 
     const [img, setImg] = useState('');
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
 
         const imgFrontendPayload = {
             image: img,
         }
         console.log("aki", imgFrontendPayload)
+
+        // const frontendData = await api.createFrontend({data: imgFrontendPayload });
+        // console.log("front", frontendData);
     }
     return (
         <>

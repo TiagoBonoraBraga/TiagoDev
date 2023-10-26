@@ -42,5 +42,14 @@ export const api = {
     } catch (error) {
       console.error(err)
     }
+  },
+
+  createFrontend: async (imgFrontendPayload) => {
+    try{
+      const response = await axios.post("/frontends", imgFrontendPayload)
+      return response.data
+    } catch (error) {
+      console.error(error)
+    }
   }
 };
