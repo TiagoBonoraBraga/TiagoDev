@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "desings",
+  "info": {
+    "singularName": "desing",
+    "pluralName": "desings",
+    "displayName": "Desing"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "type": "string"
+    }
+  }
+}

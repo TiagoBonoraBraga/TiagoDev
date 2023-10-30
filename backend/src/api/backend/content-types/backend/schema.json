@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "backends",
+  "info": {
+    "singularName": "backend",
+    "pluralName": "backends",
+    "displayName": "Backend"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "type": "string"
+    }
+  }
+}
