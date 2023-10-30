@@ -16,8 +16,8 @@ export default function AdminFormFrontend() {
         }
         console.log("aki", imgFrontendPayload)
 
-        // const frontendData = await api.createFrontend({data: imgFrontendPayload });
-        // console.log("front", frontendData);
+        const frontendData = await api.createFrontend({data: imgFrontendPayload });
+        console.log("front", frontendData);
     }
     return (
         <>

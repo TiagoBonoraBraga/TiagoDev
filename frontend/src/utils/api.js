@@ -51,5 +51,32 @@ export const api = {
     } catch (error) {
       console.error(error)
     }
-  }
+  },
+
+  createBackend: async (imgBackendPayload) => {
+    try{
+      const response = await axios.post("/backends", imgBackendPayload)
+      return response.data
+    } catch (error) {
+      console.error(error)
+    }
+  },
+
+  createDesing: async (desingPayload) => {
+    try{
+      const response = await axios.post("/desings", desingPayload)
+      return response.data
+    } catch (error) {
+      console.error(error)
+    }
+  },
+
+  createProjects: async (projectsPayload) => {
+    try{
+      const response = await axios.post("/projects", projectsPayload)
+      return response.data
+    } catch (error) {
+      console.error(error)
+    }
+  },
 };
