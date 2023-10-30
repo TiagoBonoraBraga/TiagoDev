@@ -2,18 +2,21 @@ import { useState } from "react"
 import CustomInput from "../atoms/CustomInput"
 
 import CustomButton from "../atoms/CustomButton";
+import { api } from "@/utils/api";
 
 export default function AdminFormBackend() {
 
     const [img, setImg] = useState('');
 
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
         const backendPayload = {
             image: img,
         }
         console.log("back", backendPayload);
+        const backendData = await api.createBackend({data: backendPayload });
+        console.log("back", backendData);
     }
     return (
         <>

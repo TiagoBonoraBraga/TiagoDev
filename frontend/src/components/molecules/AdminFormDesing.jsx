@@ -1,6 +1,6 @@
 import { useState } from "react"
+import { api } from "@/utils/api";
 import CustomInput from "../atoms/CustomInput"
-
 import CustomButton from "../atoms/CustomButton";
 
 export default function AdminFormDesing() {
@@ -8,12 +8,14 @@ export default function AdminFormDesing() {
     const [img, setImg] = useState('');
 
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
         const desingPayload = {
             image: img,
         }
         console.log("desing", desingPayload);
+        const desingData = await api.createDesing({data: desingPayload});
+        console.log("desing", desingData);
     }
     return (
         <>
