@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { api } from "@/utils/api";
 import CustomInput from "../atoms/CustomInput";
 import CustomLabel from "../atoms/CustomLabel";
 import CustomCheckbox from "../atoms/CustomCheckbox";
@@ -18,7 +19,7 @@ export default function AdminCardProjects() {
     const [backend, setBackend] = useState('');
     const [wordpress, setWordpress] = useState('');
 
-    function handleSubmit(e){
+    async function handleSubmit(e) {
         e.preventDefault();
         const projectsPayload = {
             title: title,
@@ -32,7 +33,9 @@ export default function AdminCardProjects() {
             backend: backend,
             wordpress: wordpress,
         }
-        console.log("projects", projectsPayload )
+        console.log("projects", projectsPayload);
+        const projectsData = await api.createProjects({data: projectsPayload});
+        console.log("proj", projectsData);
     }
     return (
         <>
