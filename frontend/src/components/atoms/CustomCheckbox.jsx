@@ -1,18 +1,25 @@
-export default function CustomCheckbox({ id, name, value, setValue, type, onChange }) {
+export default function CustomCheckbox({ options, value, setValue }) {
+
+    function handleChange({ target }) {
+        if (target.checked) {
+            setValue([...value, target.value]);
+        } else {
+            setValue(value.filter((itemValue) => itemValue !== target.value))
+        }
+    }
+
     return (
         <>
-            <input
-                className="flex justify-center items-center ml-4"
-                id={id}
-                name={name}
-                value={value}
-                type={type}
-                onChange={(e) => {
-                    setValue(e.target.value);
-                    onChange && onChange(e);
-                }}
-              
-
-            />
+            {options.map((option) => (
+                <label key={option}>
+                    {option}
+                    <input 
+                        className="flex justify-center items-center ml-4" 
+                        type="checkbox" 
+                        value={option} 
+                        checked={value.includes(option)} 
+                        onChange={handleChange} />
+                </label>
+            ))}
         </>)
-}
+}   

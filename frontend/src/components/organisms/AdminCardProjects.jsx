@@ -13,11 +13,13 @@ export default function AdminCardProjects() {
     const [description, setDescription] = useState('');
     const [repository, setRepository] = useState('');
     const [deploy, setDeploy] = useState('');
-    const [next, setNext] = useState('');
-    const [react, setReact] = useState('');
-    const [javascript, setJavascript] = useState('');
-    const [backend, setBackend] = useState('');
-    const [wordpress, setWordpress] = useState('');
+    const [technologies, setTechnologies] = useState([]);
+
+    // const [next, setNext] = useState('');
+    // const [react, setReact] = useState('');
+    // const [javascript, setJavascript] = useState('');
+    // const [backend, setBackend] = useState('');
+    // const [wordpress, setWordpress] = useState('');
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -27,14 +29,10 @@ export default function AdminCardProjects() {
             description: description,
             repository: repository,
             deploy: deploy,
-            next: next,
-            react: react,
-            javascript: javascript,
-            backend: backend,
-            wordpress: wordpress,
+            types: technologies,
         }
         console.log("projects", projectsPayload);
-        const projectsData = await api.createProjects({data: projectsPayload});
+        const projectsData = await api.createProjects({ data: projectsPayload });
         console.log("proj", projectsData);
     }
     return (
@@ -87,16 +85,9 @@ export default function AdminCardProjects() {
                 />
                 <div className="flex flex-row gap-5">
                     <div className="flex flex-col justify-start items-start">
-                        <CustomLabel title="Next" />
-                        <CustomCheckbox
-                            id="next"
-                            name="next"
-                            value={next}
-                            type="checkbox"
-                            setValue={setNext}
-                        />
+                        <CustomCheckbox options={["Next", "React", "Javascript", "Backend", "Wordpress"]} value={technologies} setValue={setTechnologies} />
                     </div>
-                    <div className="flex flex-col justify-start items-start">
+                    {/* <div className="flex flex-col justify-start items-start">
                         <CustomLabel title="React" />
                         <CustomCheckbox
                             id="react"
@@ -127,10 +118,10 @@ export default function AdminCardProjects() {
                             setValue={setBackend}
 
                         />
-                    </div>
+                    </div> */}
 
                 </div>
-                <div className="flex flex-col justify-start items-start ">
+                {/* <div className="flex flex-col justify-start items-start ">
                     <CustomLabel title="Wordpress" />
                     <CustomCheckbox
                         id="wordpress"
@@ -140,7 +131,7 @@ export default function AdminCardProjects() {
                         setValue={setWordpress}
 
                     />
-                </div>
+                </div> */}
                 <button className="w-80 ss:w-60 ss:mb-10 bg-blue-300 text-white-500 p-1.5 rounded hover:bg-blue-200 hover:text-white-500 border-blue-300 " type="submit">Adicionar</button>
             </form>
         </>
