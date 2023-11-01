@@ -18,10 +18,10 @@
     "email": {
       "type": "email"
     },
-    "message": {
-      "type": "richtext"
-    },
     "phone": {
+      "type": "string"
+    },
+    "message": {
       "type": "string"
     }
   }

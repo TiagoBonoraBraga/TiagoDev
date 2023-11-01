@@ -4,7 +4,8 @@
   "info": {
     "singularName": "project",
     "pluralName": "projects",
-    "displayName": "Project"
+    "displayName": "Project",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -17,16 +18,16 @@
     "image": {
       "type": "string"
     },
-    "Description": {
+    "description": {
       "type": "string"
     },
-    "Repository": {
+    "repository": {
       "type": "string"
     },
-    "Deploy": {
+    "deploy": {
       "type": "string"
     },
-    "Types": {
+    "types": {
       "type": "string"
     }
   }
