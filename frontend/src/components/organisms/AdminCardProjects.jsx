@@ -4,7 +4,7 @@ import CustomInput from "../atoms/CustomInput";
 import CustomLabel from "../atoms/CustomLabel";
 import CustomCheckbox from "../atoms/CustomCheckbox";
 import CustomTitle from "../atoms/CustomTitle";
-import CustomButton from "../atoms/CustomButton";
+
 
 export default function AdminCardProjects() {
 
@@ -14,12 +14,6 @@ export default function AdminCardProjects() {
     const [repository, setRepository] = useState('');
     const [deploy, setDeploy] = useState('');
     const [technologies, setTechnologies] = useState([]);
-
-    // const [next, setNext] = useState('');
-    // const [react, setReact] = useState('');
-    // const [javascript, setJavascript] = useState('');
-    // const [backend, setBackend] = useState('');
-    // const [wordpress, setWordpress] = useState('');
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -87,51 +81,7 @@ export default function AdminCardProjects() {
                     <div className="flex flex-col justify-start items-start">
                         <CustomCheckbox options={["Next", "React", "Javascript", "Backend", "Wordpress"]} value={technologies} setValue={setTechnologies} />
                     </div>
-                    {/* <div className="flex flex-col justify-start items-start">
-                        <CustomLabel title="React" />
-                        <CustomCheckbox
-                            id="react"
-                            name="react"
-                            value={react}
-                            type="checkbox"
-                            setValue={setReact}
-                        />
-                    </div>
-                    <div className="flex flex-col justify-start items-start">
-                        <CustomLabel title="Javascript" />
-                        <CustomCheckbox
-                            id="javascript"
-                            name="javascript"
-                            value={javascript}
-                            type="checkbox"
-                            setValue={setJavascript}
-
-                        />
-                    </div>
-                    <div className="flex flex-col justify-start items-start">
-                        <CustomLabel title="Backend" />
-                        <CustomCheckbox
-                            id="backend"
-                            name="backend"
-                            value={backend}
-                            type="checkbox"
-                            setValue={setBackend}
-
-                        />
-                    </div> */}
-
                 </div>
-                {/* <div className="flex flex-col justify-start items-start ">
-                    <CustomLabel title="Wordpress" />
-                    <CustomCheckbox
-                        id="wordpress"
-                        name="wordpress"
-                        value={wordpress}
-                        type="checkbox"
-                        setValue={setWordpress}
-
-                    />
-                </div> */}
                 <button className="w-80 ss:w-60 ss:mb-10 bg-blue-300 text-white-500 p-1.5 rounded hover:bg-blue-200 hover:text-white-500 border-blue-300 " type="submit">Adicionar</button>
             </form>
         </>
