@@ -11,10 +11,10 @@ export default function CustomCheckbox({ options, value, setValue }) {
     return (
         <>
             {options.map((option) => (
-                <label key={option}>
+                <label key={option} className="text-blue-400 ss:text-xs">
                     {option}
                     <input 
-                        className="flex justify-center items-center ml-4" 
+                        className="flex justify-center items-center ml-4 border-blue-200" 
                         type="checkbox" 
                         value={option} 
                         checked={value.includes(option)} 

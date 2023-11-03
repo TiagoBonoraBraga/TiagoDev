@@ -77,12 +77,12 @@ export default function AdminCardProjects() {
                     setValue={setDeploy}
                     placeholder="Insira o deploy do projeto aqui!"
                 />
-                <div className="flex flex-row gap-5">
-                    <div className="flex flex-col justify-start items-start">
+                <div className="flex flex-row gap-5 justify-center items-center">
+                    <div className="flex flex-row justify-center items-center gap-5 py-5 ">
                         <CustomCheckbox options={["Next", "React", "Javascript", "Backend", "Wordpress"]} value={technologies} setValue={setTechnologies} />
                     </div>
                 </div>
-                <button className="w-80 ss:w-60 ss:mb-10 bg-blue-300 text-white-500 p-1.5 rounded hover:bg-blue-200 hover:text-white-500 border-blue-300 " type="submit">Adicionar</button>
+                <button className="w-96 ss:w-64 ss:mb-10 bg-blue-300 text-white-500 p-1.5 rounded hover:bg-blue-200 hover:text-white-500 border-blue-300 " type="submit">Adicionar</button>
             </form>
         </>
     )
