@@ -191,3 +191,18 @@ export const wordpressProjects = [
     deploy: "www.espacodabola.com.br",
   }
 ]
+
+export const contacts = [
+  {
+    name: "Tiago Braga",
+    email: "ogait.desenvolvedor.jr@gmail.com",
+    phone: "41-988082384",
+    message: "olá, gostaria de fazer um orçamento"
+  },
+  {
+    name: "Tiago Braga",
+    email: "ogait.desenvolvedor.jr@gmail.com",
+    phone: "41-988082384",
+    message: "olá, gostaria de fazer um orçamento"
+  }
+]

@@ -8,26 +8,26 @@ import Layout from "@/components/templates/Layout";
 export default function Contacts() {
   const [contacts, setContacts] = useState([]);
 
-  // async function ContactsData() {
-  //   const contacts = await api.getContacts();
-  //   console.log("conteudo",  contacts);
-  //   setContacts(contacts);
-  // }
+  async function ContactsData() {
+    const contacts = await api.getContacts();
+    console.log("conteudo",  contacts);
+    setContacts(contacts);
+  }
 
-  // useEffect(() => {
-  //   ContactsData();
-  // }, []);
+  useEffect(() => {
+    ContactsData();
+  }, []);
 
   return (
     <Layout>
     <div className=" flex flex-wrap justify-center items-center mt-20 mb-20  ">
-      {/* {(contacts).map((contact) => {
-        // <CardContacts key={contact.id} contact={contact} />;
+      {contacts.map((contact) => {
+        <CardContact key={contact.id} contact={contact} />;
         
      
        
-      })} */}
-      <CardContact />
+      })}
+      {/* <CardContact /> */}
     </div>
     </Layout>
   );

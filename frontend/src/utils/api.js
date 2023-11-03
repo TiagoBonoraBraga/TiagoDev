@@ -26,7 +26,7 @@ export const api = {
       const response = await axios.get("/seo");
       return response.data
     } catch (error) {
-      console.error(err)
+      console.error(error)
     }
   },
 
@@ -35,7 +35,7 @@ export const api = {
       const response = await axios.get("/contacts");
       return response.data.data
     } catch (error) {
-      console.error(err)
+      console.error(error)
     }
   },
 
@@ -44,7 +44,7 @@ export const api = {
       const response = await axios.post("/contacts", contactPayload)
       return response.data
     } catch (error) {
-      console.error(err)
+      console.error(error)
     }
   },
 
