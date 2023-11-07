@@ -8,15 +8,15 @@ import Layout from "@/components/templates/Layout";
 export default function Contacts() {
   const [contacts, setContacts] = useState([]);
 
-  async function ContactsData() {
-    const contacts = await api.getContacts();
-    console.log("conteudo",  contacts);
-    setContacts(contacts);
-  }
+  // async function ContactsData() {
+  //   const contacts = await api.getContacts();
+  //   console.log("conteudo",  contacts);
+  //   setContacts(contacts);
+  // }
 
-  useEffect(() => {
-    ContactsData();
-  }, []);
+  // useEffect(() => {
+  //   ContactsData();
+  // }, []);
 
   return (
     <Layout>
