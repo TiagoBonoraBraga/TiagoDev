@@ -32,6 +32,7 @@ export default function Contacts() {
       <div className=" flex flex-wrap justify-center items-center mt-20 mb-20  ">
         <ul>
           {loading && <li className="text-blue-200">Carregando...</li>}
+          {error && <li className="text-blue-200">Errouuuu...</li>}
         </ul>
         {contacts?.map((contact, index) => {
           <CardContact key={index} contact={contact} />
