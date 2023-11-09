@@ -2,6 +2,7 @@ import { useState } from "react"
 import CustomInput from "../atoms/CustomInput"
 import { api } from "@/utils/api"
 import CustomButton from "../atoms/CustomButton";
+import { toast } from 'react-toastify'
 
 
 export default function AdminFormFrontend() {
@@ -18,7 +19,13 @@ export default function AdminFormFrontend() {
 
         const frontendData = await api.createFrontend({data: imgFrontendPayload });
         console.log("front", frontendData);
+        if(!frontendData){
+            toast.error('Erro ao cadastrar')     
+          } else {
+            toast.success('Contato cadastrado com sucesso!')
+          }
     }
+
     return (
         <>
             <form className="w-auto ss:w-60 py-1 flex justify-center items-center gap-2 ss:flex ss:flex-col" onSubmit={handleSubmit}>

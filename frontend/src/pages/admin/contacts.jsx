@@ -1,6 +1,7 @@
 import CardContact from "@/components/molecules/CardContact";
 import { useState, useEffect } from "react";
 import { api } from "@/utils/api";
+import { toast } from 'react-toastify'
 import Layout from "@/components/templates/Layout";
 
 
@@ -22,6 +23,8 @@ export default function Contacts() {
       setLoading(false);
     }
   }
+  
+
 
   useEffect(() => {
     ContactsData();
