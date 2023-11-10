@@ -37,7 +37,7 @@ export default function AdminFormFrontend() {
                     setValue={setImg}
                     placeholder="Endereço da imagem aqui!"
                 />
-                <CustomButton title="Cadastrar" />
+                <CustomButton title="Adicionar" />
             </form>
         </>
     )

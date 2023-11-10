@@ -36,7 +36,7 @@ export default function AdminFormBackend() {
                 placeholder="Endereço da imagem aqui!"
                 
             />
-            <CustomButton title="enviar" />
+            <CustomButton title="Adicionar" />
         </form>
         </>
     )

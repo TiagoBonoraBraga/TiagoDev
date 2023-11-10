@@ -4,6 +4,7 @@ import CustomInput from "../atoms/CustomInput";
 import CustomLabel from "../atoms/CustomLabel";
 import CustomCheckbox from "../atoms/CustomCheckbox";
 import CustomTitle from "../atoms/CustomTitle";
+import { toast } from 'react-toastify'
 
 
 export default function AdminCardProjects() {
@@ -28,6 +29,11 @@ export default function AdminCardProjects() {
         console.log("projects", projectsPayload);
         const projectsData = await api.createProjects({data: projectsPayload});
         console.log("proj", projectsData);
+        if(!projectsData){
+            toast.error('Erro ao cadastrar')     
+          } else {
+            toast.success('Projeto cadastrado com sucesso!')
+          }
     }
     return (
         <>

@@ -2,6 +2,7 @@ import { useState } from "react"
 import { api } from "@/utils/api";
 import CustomInput from "../atoms/CustomInput"
 import CustomButton from "../atoms/CustomButton";
+import { toast } from 'react-toastify'
 
 export default function AdminFormDesing() {
 
@@ -16,6 +17,11 @@ export default function AdminFormDesing() {
         console.log("desing", desingPayload);
         const desingData = await api.createDesing({data: desingPayload});
         console.log("desing", desingData);
+        if(!desingData){
+            toast.error('Erro ao cadastrar')     
+          } else {
+            toast.success('Tecnologia de Desing cadastrada com sucesso!')
+          }
     }
     return (
         <>
@@ -28,7 +34,7 @@ export default function AdminFormDesing() {
                 setValue={setImg}
                 placeholder="Endereço da imagem aqui!"
             />
-            <CustomButton title="enviar" />
+            <CustomButton title="Adicionar" />
          </form>
         </>
     )
