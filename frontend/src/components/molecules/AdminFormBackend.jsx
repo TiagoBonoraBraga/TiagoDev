@@ -3,6 +3,7 @@ import CustomInput from "../atoms/CustomInput"
 
 import CustomButton from "../atoms/CustomButton";
 import { api } from "@/utils/api";
+import { toast } from 'react-toastify'
 
 export default function AdminFormBackend() {
 
@@ -17,6 +18,11 @@ export default function AdminFormBackend() {
         console.log("back", backendPayload);
         const backendData = await api.createBackend({data: backendPayload });
         console.log("back", backendData);
+        if(!backendData){
+            toast.error('Erro ao cadastrar')     
+          } else {
+            toast.success('Tecnologia Backend cadastrada com sucesso!')
+          }
     }
     return (
         <>

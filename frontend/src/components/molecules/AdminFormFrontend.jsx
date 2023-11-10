@@ -22,7 +22,7 @@ export default function AdminFormFrontend() {
         if(!frontendData){
             toast.error('Erro ao cadastrar')     
           } else {
-            toast.success('Contato cadastrado com sucesso!')
+            toast.success('Tecnologia Frontend cadastrada com sucesso!')
           }
     }
 
