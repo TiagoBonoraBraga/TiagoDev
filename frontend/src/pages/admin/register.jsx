@@ -1,8 +1,31 @@
+import nookies from 'nookies';
 import AdminCardTecno from "@/components/organisms/AdminCardTecno";
 import AdminCardProjects from "@/components/organisms/AdminCardProjects";
 import Layout from "@/components/templates/Layout";
 
-export default function Register() {
+export async function getServerSideProps(context) {
+    const cookies = nookies.get(context);
+    console.log('cookies', cookies);
+    const SECRET_PASSWORD = '123456'
+    const USERPASSWORD = cookies.SECRET_PASSWORD;
+    const isAuthorized = SECRET_PASSWORD === USERPASSWORD;
+    
+    if(!isAuthorized){
+      console.log('NÂO Autorizado');
+      return {
+        redirect: {
+          permanent: false,
+          destination: '/login',
+        }
+      };  
+    }
+    console.log('Autorizado!!!');
+    return {
+      props: {}
+    }
+  } 
+
+export default function Register(props) {
     return (
         <>
         <Layout>

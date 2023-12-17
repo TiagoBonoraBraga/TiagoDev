@@ -6,8 +6,6 @@ import nookies from 'nookies';
 
 export default function LoginForm() {
 
-    
-
 
     const [password, setPassword] = useState('123456');
     const router = useRouter();
@@ -23,9 +21,9 @@ export default function LoginForm() {
                             if (password) {
                                 nookies.set(null, 'SECRET_PASSWORD', password, {
                                     maxAge: 30 * 24 * 60 * 60,
-                                    path: '/'
+                                    path: '/admin/register'
                                 });
-                                router.push('/')
+                                router.push('/admin/register')
                             } else {
                                 toast.error('Wrong Password')
                             }
