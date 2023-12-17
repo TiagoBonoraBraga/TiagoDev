@@ -15,7 +15,7 @@ export default function LoginForm() {
                             Tiago Dev - Login
                         </h1>
                         <div class="w-full mt-6 mr-0 mb-0 ml-0 relative space-y-8">
-                            <div class="relative">
+                            {/* <div class="relative">
                                 <CustomLabel
                                     title={"Email:"}
                                     class="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600
@@ -27,7 +27,7 @@ export default function LoginForm() {
                                     id="email"
 
                                 />
-                            </div>
+                            </div> */}
                             <div class="relative">
                                 <CustomLabel
                                     title={"Password:"}
