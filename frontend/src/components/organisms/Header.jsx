@@ -79,12 +79,12 @@ const Header = () => {
           </div>
         </div>
         <div className="hidden space-x-2 md:inline-block">
-          <a
-            href="#"
+          <Link
+            href="/login"
             className="px-4 py-2 text-blue-300 bg-white-500 rounded-md shadow hover:bg-blue-500 hover:text-white-500"
           >
             Login
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
