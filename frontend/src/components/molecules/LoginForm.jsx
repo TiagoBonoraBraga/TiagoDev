@@ -1,36 +1,40 @@
+import CustomLabel from "@/components/atoms/CustomLabel";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { toast } from 'react-toastify'
 import nookies from 'nookies';
-import CustomLabel from "@/components/atoms/CustomLabel";
 
 export default function LoginForm() {
-    const [password, setPassword] = useState('prafrenteepracima');
+
+    
+
+
+    const [password, setPassword] = useState('123456');
     const router = useRouter();
     console.log('router', router);
     return (
         <>
             <div className="flex flex-col items-center justity-center w-full mt-40  ">
                 <div className="flex justify-center items-center w-full mt-20 mr-0 mb-0 ml-0 relative z-10 max-w-2xl lg:mt-0 lg:w-5/12">
-                    <form 
+                    <form
                         className="flex flex-col items-start justify-start pt-10 pr-10 pb-10 pl-10 bg-white shadow-2xl rounded-xl relative z-10"
                         onSubmit={(e) => {
                             e.preventDefault();
-                            if(password) {
-                                nookies.set(null, 'SECRET_PASSWORD',{
+                            if (password) {
+                                nookies.set(null, 'SECRET_PASSWORD', password, {
                                     maxAge: 30 * 24 * 60 * 60,
-                                    path: '/',
+                                    path: '/'
                                 });
                                 router.push('/')
                             } else {
-                                toast.error('Wrong Password') 
+                                toast.error('Wrong Password')
                             }
                         }}
-                         >
+                    >
                         <h1 className="w-full text-4xl font-bold text-blue-200 text-center leading-snug font-serif">
                             Tiago Dev - ADM AREA
                         </h1>
-                        <div className="w-full mt-6 mr-0 mb-0 ml-0 relative space-y-8">                        
+                        <div className="w-full mt-6 mr-0 mb-0 ml-0 relative space-y-8">
                             <div className="relative">
                                 <CustomLabel
                                     title={"Password:"}
@@ -44,10 +48,10 @@ export default function LoginForm() {
                                 />
                             </div>
                             <div className="relative">
-                                <button 
+                                <button
                                     className="w-full bg-blue-300 text-white-500 mt-5  p-2 rounded hover:bg-blue-500  hover:text-white-500 "
                                     type="Submit"
-                                    >Login</button>
+                                >Login</button>
                             </div>
                         </div>
                     </form>
