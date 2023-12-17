@@ -1,7 +1,11 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
+import nookies from 'nookies';
+import CustomLogo from "../atoms/CustomLogo";
 
 export default function AdminHeader() {
     const [navbar, setNavbar] = useState(false);
+    const router = useRouter();
     return (
         <nav className="w-full bg-blue-300 shadow">
             <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
@@ -53,31 +57,26 @@ export default function AdminHeader() {
                     >
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                             <li className="text-white-500 hover:text-white-500 hover:text-lg">
-                                <a href="/">Contatos</a>
+                                <a href="/admin/contacts">Contatos</a>
                             </li>
                             <li className="text-white-500 hover:text-white-500 hover:text-lg">
-                                <a href="/about">Novos Registros</a>
+                                <a href="/admin/register">Novos Registros</a>
                             </li>
 
                         </ul>
 
-                        <button className="mt-3 space-y-2 lg:hidden md:hidden md:inline-block">
-                            <Link
-                                href="/login"
-                                className="inline-block w-full px-4 py-2 text-center text-blue-500 bg-white-500 rounded-md shadow hover:bg-blue-500 hover:text-white-500"
-                            >
-                                Login Admin
-                            </Link>
-                        </button>
                     </div>
                 </div>
-                <div className="hidden space-x-2 md:inline-block">
-                    <a
-                        href="#"
+                <div className="hidden space-x-2 md:inline-block">                   
+                    <button
                         className="px-4 py-2 text-blue-300 bg-white-500 rounded-md shadow hover:bg-blue-500 hover:text-white-500"
+                        onClick={() => {
+                            nookies.destroy(null, 'SECRET_PASSWORD');
+                            router.push('/')
+                        }}
                     >
-                        Login
-                    </a>
+                        Logout
+                    </button>
                 </div>
             </div>
         </nav>

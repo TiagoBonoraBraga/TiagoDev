@@ -2,7 +2,7 @@ import CardContact from "@/components/molecules/CardContact";
 import { useState, useEffect } from "react";
 import { api } from "@/utils/api";
 import { toast } from 'react-toastify'
-import Layout from "@/components/templates/Layout";
+import LayoutAdm from "@/components/templates/LayoutAdm";
 
 
 
@@ -31,7 +31,7 @@ export default function Contacts() {
   }, []);
 
   return (
-    <Layout>
+    <LayoutAdm>
       <div className=" flex flex-wrap justify-center items-center mt-20 mb-20  ">
         <ul>
           {loading && <li className="text-blue-200">Carregando...</li>}
@@ -41,6 +41,6 @@ export default function Contacts() {
           <CardContact key={index} contact={contact} />
         })}
       </div>
-    </Layout>
+    </LayoutAdm>
   );
 }

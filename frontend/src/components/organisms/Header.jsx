@@ -1,12 +1,10 @@
 import { useState } from "react";
 import Link from 'next/link';
-import { useRouter } from "next/router";
-import nookies from 'nookies';
 import CustomLogo from "@/components/atoms/CustomLogo";
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
-  const router = useRouter();
+
   return (
     <nav className="w-full bg-blue-300 shadow">
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
@@ -79,15 +77,7 @@ const Header = () => {
           >
             Login
           </Link>
-          <button
-            className="px-4 py-2 text-blue-300 bg-white-500 rounded-md shadow hover:bg-blue-500 hover:text-white-500"
-            onClick={() => {
-              nookies.destroy(null, 'SECRET_PASSWORD');
-              router.push('/')
-            }}
-          >
-            Logout
-          </button>
+         
         </div>
       </div>
     </nav>
