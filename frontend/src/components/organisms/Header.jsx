@@ -60,12 +60,15 @@ const Header = () => {
               </li>
               <li className="text-white-500 hover:text-white-500 hover:text-lg">
                 <a href="/about">Sobre</a>
-              </li>
+              </li>              
               <li className="text-white-500 hover:text-white-500 hover:text-lg">
                 <a href="/projects">Projetos</a>
               </li>
               <li className="text-white-500 hover:text-white-500 hover:text-lg">
                 <a href="/contact">Contato</a>
+              </li>
+              <li className="text-white-500 hover:text-white-500 hover:text-lg">
+                <a href="/about">Ogait Ashtar</a>
               </li>
             </ul>           
           </div>

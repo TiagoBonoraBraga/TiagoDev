@@ -21,7 +21,7 @@ export default function LoginForm() {
                             if (password) {
                                 nookies.set(null, 'SECRET_PASSWORD', password, {
                                     maxAge: 30 * 24 * 60 * 60,
-                                    path: '/admin/register'
+                                    path: '/'
                                 });
                                 router.push('/admin/register')
                             } else {
