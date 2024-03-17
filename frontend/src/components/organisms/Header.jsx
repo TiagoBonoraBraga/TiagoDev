@@ -1,21 +1,26 @@
 import { useState } from "react";
 import Link from 'next/link';
 import CustomLogo from "@/components/atoms/CustomLogo";
+import ThemeToggle from "@/components/atoms/ThemeToggle";
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
 
   return (
-    <nav className="w-full bg-blue-300 shadow">
+    <nav className="fixed top-0 w-full bg-blue-300 dark:bg-black-500 shadow">
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <CustomLogo />
             <div className="md:hidden">
               <button
-                className="p-2 text-white-500 rounded-md outline-none focus:border-white-500 focus:border"
+                className="flex flex-row justify-center items-center gap-5 text-black-500 rounded-md outline-none"
                 onClick={() => setNavbar(!navbar)}
               >
+                <div>
+                  <ThemeToggle />
+                </div>
+
                 {navbar ? (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +65,7 @@ const Header = () => {
               </li>
               <li className="text-white-500 hover:text-white-500 hover:text-lg">
                 <a href="/about">Sobre</a>
-              </li>              
+              </li>
               <li className="text-white-500 hover:text-white-500 hover:text-lg">
                 <a href="/projects">Projetos</a>
               </li>
@@ -70,8 +75,11 @@ const Header = () => {
               <li className="text-white-500 hover:text-white-500 hover:text-lg">
                 <a href="/about">Ogait Ashtar</a>
               </li>
-            </ul>           
+            </ul>
           </div>
+        </div>
+        <div className="sx:hidden" >
+          <ThemeToggle />
         </div>
         <div className="hidden space-x-2 md:inline-block">
           <Link
@@ -80,7 +88,7 @@ const Header = () => {
           >
             Login
           </Link>
-         
+
         </div>
       </div>
     </nav>

@@ -6,6 +6,7 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     screens: {
       ss: { max: '1030px'},
@@ -14,10 +15,16 @@ module.exports = {
       md: '768px',
       lg: '1024px',
       xl: '1280px',
+      sx: {max: '770px'}
     },
     colors: {
       black:{
         500: '#000000',
+      },
+      gray: {
+        100: '#A4A69C',
+        200: '#dcdcde',
+        300: '#4C594F'
       },
       white: {
         500: '#ffffff',
@@ -28,6 +35,9 @@ module.exports = {
         300: '#3155c0',
         400: '#1945ad',
         500: '#00359a',
+      },
+      yellow: { 
+        500: '#ffff00', 
       },
     
     },

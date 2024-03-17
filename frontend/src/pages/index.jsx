@@ -14,7 +14,7 @@ import Layout from "@/components/templates/Layout";
 //   const SECRET_PASSWORD = '123456'
 //   const USERPASSWORD = cookies.SECRET_PASSWORD;
 //   const isAuthorized = SECRET_PASSWORD === USERPASSWORD;
-  
+
 //   if(!isAuthorized){
 //     console.log('NÂO Autorizado');
 //     return {
@@ -31,14 +31,16 @@ import Layout from "@/components/templates/Layout";
 // } 
 
 export default function Home() {
-  
+
   return (
     <>
       <Layout>
-        <SeoHead />
-        <SecondHeader />
-        <CardTecno />
-        <Whatsapp />
+        <main className="h-100vh">
+          <SeoHead />
+          <SecondHeader />
+          <CardTecno />
+          <Whatsapp />
+        </main>
       </Layout>
     </>
   );
