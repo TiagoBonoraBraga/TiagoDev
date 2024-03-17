@@ -1,8 +1,8 @@
 import Image from "next/image";
 import {
   imagens,
-  imagens2,
-  imagens3,
+  imagensBackend,
+  imagesDesing,
   imagens4,
   imagens5,
   imagens6,
@@ -12,9 +12,9 @@ import CustomTitle from "../atoms/CustomTitle";
 
 export default function CardTecno() {
   return (
-    <section className="flex flex-row ss:flex ss:flex-col ss:justify-center ss:items-center  gap-5 justify-center  mb-10">
-       {/* <Background /> */}
-      <div className="flex flex-col justify-center items-center mt-5 ring-2 ring-blue-100 bg-blue-200 bg-opacity-20 p-5 rounded-lg">
+    <section className="flex flex-wrap items-center ss:flex ss:flex-col ss:justify-center ss:items-center  gap-5 justify-center  mb-20">
+      {/* <Background /> */}
+      <div className="flex flex-col justify-start items-center mt-5 ring-2 ring-blue-100 bg-blue-200 bg-opacity-20 p-5 rounded-lg">
         <CustomTitle title="FRONTEND" />
         <div className="flex flex-row gap-3">
           {imagens.map((image, index) => (
@@ -29,54 +29,15 @@ export default function CardTecno() {
             </div>
           ))}
         </div>
-        <div className="flex flex-row justify-center items-center mt-5 gap-3">
-          {imagens2.map((image, index) => (
-            <div key={index}>
-              <Image
-                src={image.img2}
-                width={100}
-                height={100}
-                alt="Tecnologias"
-                className="rounded-lg"
-              />
-            </div>
-          ))}
-        </div>
-        <div className="flex flex-row justify-center items-center mt-5 gap-3">
-          {imagens3.map((image, index) => (
-            <div key={index}>
-              <Image
-                src={image.img3}
-                width={100}
-                height={100}
-                alt="Tecnologias"
-                className="rounded-lg"
-              />
-            </div>
-          ))}
-        </div>
       </div>
 
       <div className="flex flex-col items-center mt-5 ring-2 ring-blue-100 bg-blue-200 bg-opacity-20 p-5 rounded-lg">
         <CustomTitle title="BACKEND" />
         <div className="flex flex-row gap-3">
-          {imagens4.map((image, index) => (
+          {imagensBackend.map((imageBackend, index) => (
             <div key={index}>
               <Image
-                src={image.img4}
-                width={100}
-                height={100}
-                alt="Tecnologias"
-                className="rounded-lg"
-              />
-            </div>
-          ))}
-        </div>
-        <div className="flex flex-row justify-center items-center mt-5 gap-3">
-          {imagens5.map((image, index) => (
-            <div key={index}>
-              <Image
-                src={image.img5}
+                src={imageBackend.img}
                 width={100}
                 height={100}
                 alt="Tecnologias"
@@ -90,10 +51,10 @@ export default function CardTecno() {
       <div className="flex flex-col items-center mt-5 ring-2 ring-blue-100 bg-blue-200 bg-opacity-20 p-5 rounded-lg">
         <CustomTitle title="GERENCIAMENTO DE PROJETOS E DESING " />
         <div className="flex flex-row justify-center items-center mt-5 gap-3">
-          {imagens6.map((image, index) => (
+          {imagesDesing.map((imageDesing, index) => (
             <div key={index}>
               <Image
-                src={image.img6}
+                src={imageDesing.img}
                 width={100}
                 height={100}
                 alt="Tecnologias"

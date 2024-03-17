@@ -21,79 +21,66 @@ import Fotoimage from "@/public/images/fotoimage.png";
 export const imagens = [
   {
     img: Html,
-    title: "HTML 5",
   },
   {
     img: JavaScript,
-    title: "JAVASCRIPT",
   },
   {
     img: Css,
-    title: "CSS 3",
-  },
-];
-export const imagens2 = [
-  {
-    img2: Next,
-    title2: "NEXT.js",
   },
   {
-    img2: React,
-    title2: "REACT.js",
+    img: Next,
   },
   {
-    img2: Typescript,
-    title2: "TYPESCRIPT",
-  },
-];
-export const imagens3 = [
-  {
-    img3: Sass,
-    title3: "SASS",
+    img: React,    
   },
   {
-    img3: StyledComponent,
-    title3: "STYLED-COMPONENTS",
+    img: Typescript,    
   },
   {
-    img3: Tailwind,
-    title3: "TAILWIND CSS",
+    img: Sass,    
+  },
+  {
+    img: StyledComponent,    
+  },
+  {
+    img: Tailwind,   
   },
 ];
 
+
 //backend
-export const imagens4 = [
+export const imagensBackend = [
   {
-    img4: Prisma,
+    img: Prisma,
   },
   {
-    img4: Postgre,
+    img: Postgre,
   },
   {
-    img4: Php,
-  },
-];
-export const imagens5 = [
-  {
-    img5: node,
+    img: Php,
   },
   {
-    img5: Mongo,
+    img: node,
   },
   {
-    img5: Express,
+    img: Mongo,
+  },
+  {
+    img: Express,
   },
 ];
+
 // DESING E PROJETO
-export const imagens6 = [
+export const imagesDesing = [
   {
-    img6: Figma,
+    img: Figma,
   },
   {
-    img6: Miro,
+    img: Miro,
   },
   {
-    img6: Trello,
+    img: Trello,
   },
 ];
 
