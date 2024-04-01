@@ -12,7 +12,7 @@ import CustomTitle from "../atoms/CustomTitle";
 
 export default function CardTecno() {
   return (
-    <section className="flex flex-wrap items-center ss:flex ss:flex-col ss:justify-center ss:items-center  gap-5 justify-center  mb-20">
+    <section className=" flex flex-wrap items-center ss:flex ss:flex-col ss:justify-center ss:items-center  gap-5 justify-center  ">
       {/* <Background /> */}
       <div className="flex flex-col justify-start items-center mt-5 ring-2 ring-blue-100 bg-blue-200 bg-opacity-20 p-5 rounded-lg">
         <CustomTitle title="FRONTEND" />
