@@ -12,14 +12,14 @@ const Header = () => {
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <CustomLogo />
-            <div className="md:hidden">
+            <div className="md:hidden flex flex-row">
+              <div>
+                <ThemeToggle />
+              </div>
               <button
                 className="flex flex-row justify-center items-center gap-5 text-black-500 rounded-md outline-none"
                 onClick={() => setNavbar(!navbar)}
               >
-                <div>
-                  <ThemeToggle />
-                </div>
 
                 {navbar ? (
                   <svg
@@ -51,6 +51,7 @@ const Header = () => {
                   </svg>
                 )}
               </button>
+             
             </div>
           </div>
         </div>
