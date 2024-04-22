@@ -1,7 +1,7 @@
 
 const Footer = () => {
   return (
-    <footer className=" fixed bottom-0 w-full bg-blue-300 dark:bg-black-400 ">
+    <footer className="  w-full bg-blue-300 dark:bg-black-400 ">
       <div
         className="
           container flex flex-col flex-wrap px-4 overflow-auto mx-auto md:items-center lg:items-start md:flex-row md:flex-nowrap"
