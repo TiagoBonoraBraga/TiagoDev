@@ -7,7 +7,7 @@ const Header = () => {
   const [navbar, setNavbar] = useState(false);
 
   return (
-    <nav className="fixed top-0 z-10 w-full bg-blue-300 dark:bg-black-400 shadow">
+    <nav className="fixed top-0 z-10 w-full bg-blue-300 tracking-wider dark:bg-black-400 shadow">
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">

@@ -26,6 +26,7 @@ export default function LoginForm() {
                                 router.push('/admin/register')
                             } else {
                                 toast.error('Wrong Password')
+                                router.push('/')
                             }
                         }}
                     >
