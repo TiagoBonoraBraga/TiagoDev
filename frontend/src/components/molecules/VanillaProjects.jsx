@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { javascriptProjects } from "@/utils/mocks";
+import { javascriptProjects, wordpressProjects } from "@/utils/mocks";
 import CustomCard from "../atoms/CustomCard";
 export default function VanillaProjects() {
   return (
@@ -36,7 +36,7 @@ export default function VanillaProjects() {
                 GitHub - Repositório
               </Link>
               <Link
-                href="https://www.foodbox.cia.tv"
+                href={javascriptProject.link}
                 Target="_blank"
                 className="flex justify-center items-center mb-3"
               >
@@ -44,12 +44,7 @@ export default function VanillaProjects() {
               </Link>
             </div>
           </CustomCard>
-          // <div
-          //   key={index}
-          //   className="flex flex-col w-2/3  ss:flex ss:flex-col ss:max-w-sm ring-2 mt-3 mb-10 ring-blue-200 bg-blue-100 bg-opacity-25 rounded-lg dark:bg-gray-200   hover:shadow-lg shadow-md shadow-blue-200 hover:shadow-blue-100 transition duration-300 ease-in-out transform hover:-translate-y-1 dark:shadow-gray-100 "
-          // >
-          // </div>
-         
+                   
         ))}
       </div>
     </>

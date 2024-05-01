@@ -102,6 +102,7 @@ export const javascriptProjects = [
       "Projeto Cardápio Digital - Projeto desenvolvido através da aulas do Mestre Gustavo Guanabara do canal Curso em Video no youtube - O FoodBox foi desenvolvido totalmente na linguagem Javascript Vanilla, visando aprimorar meus conhecimentos na linguagem pura. Na estilização do projeto foi utilizado css 3 e também foi feita a integração dos pedidos através de mensagens via whatsapp.",
     repository: "https://github.com/TiagoBonoraBraga/foodbox",
     deploy: "www.foodbox.cia.tv",
+    link: "https://tiagobonorabraga.github.io/foodbox/"
   },
   {
     image: PecoTheCat,
@@ -109,6 +110,7 @@ export const javascriptProjects = [
     description: "Projeto Jogo do Humor - Projeto desenvolvido no módulo 2 do curso de  Desenvolvimento Fullstack da Blue Ed.Tech.  O Jogo do Humor foi desenvolvido totalmente na linguagem Javascript Vanilla, visando aprimorar meus conhecimentos na linguagem pura. Na estilização do projeto foi utilizado css 3. O jogo consiste em fazer a manipulação do DOM trocando a imagem e o humor do Peco The Cat através da ação do botão.",
     repository: "https://github.com/TiagoBonoraBraga/modulo2proj1",
     deploy: "www.jogodohumor.cia.tv",
+    link: "https://tiagobonorabraga.github.io/modulo2proj1/"
   },
 ];
 
@@ -149,7 +151,7 @@ export const nextProjects = [
     title: "Fpinfo",
     description: "Projeto Fpinfo,  Είπε, κι εμάς μάς έκοψε μεμιάς τα ήπατά μας το μουγκρητό του το βαρύ    κι η όψη η γιγαντένια. Όμως του απολογήθηκα κι αυτά τα λόγια του είπα· Από την Τροία ερχόμαστε, Αχαιοί που μύριοι ανέμοι μάς πέταξαν στης θάλασσας τα τρίσβαθα τα πλάτια. Πατρίδα θέλαμε, κι αλλού μάς φέραν άλλοι δρόμοι· τέτοιο του Δία στάθηκε το θέλημα κι η γνώμη. Και λέμε απ' του Αγαμέμνονα του γιού του Ατρέα τ' ασκέρι πως είμαστε",
     repository: "https://github.com/TiagoBonoraBraga/modulo2proj1",
-    deploy: "www.jogodohumor.cia.tv",
+    deploy: "www.fpinfo.com",
   },
   {
     image: FoodBox,

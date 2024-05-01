@@ -3,9 +3,9 @@ import profile from "@/public/images/profile.png";
 export default function CardAbout() {
   return (
     <>
-      <section classNameName="flex flex-row  ss:flex ss:flex-col ss:justify-center ss:items-center mt-20 gap-5 justify-center  mb-10">
+      <section classNameName="flex flex-row  ss:flex ss:flex-col ss:justify-center ss:items-center mt-20 gap-5 justify-center  mb-10 ">
 
-        <div className=" mt-5 max-w-sm w-full lg:max-w-full lg:flex">
+        <div className=" mt-5 max-w-sm w-full h-full lg:max-w-full lg:flex mb-32">
           <div className="  flex-none bg-cover text-center overflow-hidden p-8 ">
             <Image
               src={profile}
@@ -15,7 +15,7 @@ export default function CardAbout() {
               className="rounded-full"
             />
           </div>
-          <div className="border border-blue-300 bg-blue-200 bg-opacity-20 mb-10 mr-5 ss:mr-0 ss:flex ss:justify-center  rounded p-4 flex flex-col justify-between leading-normal">
+          <div className="border border-blue-300 bg-blue-200 dark:bg-gray-200 bg-opacity-20 mb-10 mr-5 ss:mr-0 ss:flex ss:justify-center  rounded p-4 flex flex-col justify-between leading-normal">
             <div className="mb-8">
               <p className="text-sm text-gray-600 flex items-center">
                 Sobre mim...
