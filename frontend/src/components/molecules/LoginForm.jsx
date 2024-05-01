@@ -7,7 +7,7 @@ import nookies from 'nookies';
 export default function LoginForm() {
 
 
-    const [password, setPassword] = useState('123456');
+    const [password, setPassword] = useState();
     const router = useRouter();
     console.log('router', router);
     return (

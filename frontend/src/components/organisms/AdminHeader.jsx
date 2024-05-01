@@ -7,10 +7,10 @@ export default function AdminHeader() {
     const [navbar, setNavbar] = useState(false);
     const router = useRouter();
     return (
-        <nav className="w-full bg-blue-300 shadow">
-            <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+        <nav className="w-full z-10 top-0  fixed bg-blue-300 shadow">
+            <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex ">
                 <div>
-                    <div className="flex items-center justify-between py-3 md:py-5 md:block">
+                    <div className="flex items-center justify-between  md:py-5 md:block">
                         <CustomLogo />
                         <div className="md:hidden">
                             <button
