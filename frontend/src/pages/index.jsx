@@ -35,9 +35,9 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <main className="h-100vh ">
+        <main className="h-100vh flex flex-col justify-center items-center ">
           <SeoHead />
-          <SecondHeader />
+          <SecondHeader  />
           <CardTecno />
           <Whatsapp />
         </main>
