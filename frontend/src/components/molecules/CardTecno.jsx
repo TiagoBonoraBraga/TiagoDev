@@ -2,19 +2,16 @@ import Image from "next/image";
 import {
   imagens,
   imagensBackend,
-  imagesDesing,
-  imagens4,
-  imagens5,
-  imagens6,
+  imagesDesing, 
 } from "@/utils/mocks";
 import CustomTitle from "../atoms/CustomTitle";
-// import Background from "@/components/atoms/Background";
+
 
 export default function CardTecno() {
   return (
-    <section className=" flex flex-wrap items-center ss:flex ss:flex-col ss:justify-center ss:items-center  gap-5 justify-center  ">
+    <section className=" flex flex-col items-center ss:flex ss:flex-col ss:justify-center ss:items-center  gap-5 justify-center p-10  ">
       {/* <Background /> */}
-      <div className="flex flex-col justify-start items-center mt-5 ring-2 ring-blue-100 bg-blue-200 bg-opacity-20 p-5 rounded-lg">
+      <div className="flex flex-col justify-start items-center mt-5 ring-2 ring-blue-100 dark:ring-black-500 bg-blue-200 dark:bg-gray-100 bg-opacity-20 p-5 rounded-lg">
         <CustomTitle title="FRONTEND" />
         <div className="flex flex-row gap-3">
           {imagens.map((image, index) => (
@@ -31,7 +28,7 @@ export default function CardTecno() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center mt-5 ring-2 ring-blue-100 bg-blue-200 bg-opacity-20 p-5 rounded-lg">
+      <div className="flex flex-col items-center mt-5 ring-2 ring-blue-100 dark:ring-black-500 bg-blue-200 bg-opacity-20 dark:bg-gray-100 p-5 rounded-lg">
         <CustomTitle title="BACKEND" />
         <div className="flex flex-row gap-3">
           {imagensBackend.map((imageBackend, index) => (
@@ -48,7 +45,7 @@ export default function CardTecno() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center mt-5 ring-2 ring-blue-100 bg-blue-200 bg-opacity-20 p-5 rounded-lg">
+      <div className="flex flex-col items-center mt-5 ring-2 ring-blue-100 dark:ring-black-500 bg-blue-200 dark:bg-gray-100 bg-opacity-20 p-5 rounded-lg">
         <CustomTitle title="GERENCIAMENTO DE PROJETOS E DESING " />
         <div className="flex flex-row justify-center items-center mt-5 gap-3">
           {imagesDesing.map((imageDesing, index) => (
