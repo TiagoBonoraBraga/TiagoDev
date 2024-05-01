@@ -67,10 +67,10 @@ export default function ContactForm() {
           width={500}
           height={500}
           alt="About Picture"
-          // className="rounded-full"
+          className="rounded-full"
         />
       </div>
-      <form className=" mt-20 ss:mt-0 flex flex-col ring-2 ring-blue-200 p-10 rounded-lg mb-20" onSubmit={handleSubmit}>
+      <form className=" mt-20 ss:mt-0 flex flex-col ring-2 ring-blue-200 p-10 rounded-lg mb-20 dark:bg-gray-200" onSubmit={handleSubmit}>
       <CustomTitle title="Entre em contato comigo"/>
         <CustomLabel title="Nome:" />
         <CustomInput
@@ -110,7 +110,7 @@ export default function ContactForm() {
           onChange={handleMessageChange}
           rows={5}
         />
-        <CustomButton title="Enviar" />
+        <button className="w-80 ss:w-64 ss:mb-5 bg-blue-300 text-white-500 p-1.5 rounded hover:bg-blue-200 hover:text-white-500 border-blue-300 my-5 ">Enviar</button>
       </form>
     </section>
   );
