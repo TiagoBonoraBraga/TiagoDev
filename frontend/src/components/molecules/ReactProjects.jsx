@@ -30,8 +30,8 @@ export default function ReactProject() {
                 {reactProject.description}
               </p>
 
-              <Link href="https://github.com/TiagoBonoraBraga/TiagoDev" className="flex justify-center items-center mb-3">Repositório GitHub</Link>
-              <Link href="https://www.foodbox.cia.tv" className="flex justify-center items-center mb-3">www.foodbox.cia.tv</Link>
+              <Link href={reactProject.repository} className="flex justify-center items-center mb-3">Repositório GitHub</Link>
+              {/* <Link href="https://www.foodbox.cia.tv" className="flex justify-center items-center mb-3">www.foodbox.cia.tv</Link> */}
 
             </div>
           </CustomCard>

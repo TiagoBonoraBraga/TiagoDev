@@ -22,6 +22,8 @@ import PecoTheCat from "@/public/images/pecoTheCat.jpg";
 import Familia from "@/public/images/familia.png";
 import Protech from "@/public/images/protech.png";
 import Bola from "@/public/images/bola.png";
+import Elgeladon from "@/public/images/elGeladon.png";
+import OldGames from "@/public/images/oldgames.png";
 
 
 
@@ -116,24 +118,24 @@ export const javascriptProjects = [
 
 export const reactProjects = [
   {
-    image: FoodBox,
+    image: Elgeladon ,
     title: "El-Geladon",
-    description: "Projeto El-Geladon - Cardápio de Paletas Mexicanas,  Είπε, κι εμάς μάς έκοψε μεμιάς τα ήπατά μας το μουγκρητό του το βαρύ    κι η όψη η γιγαντένια. Όμως του απολογήθηκα κι αυτά τα λόγια του είπα· Από την Τροία ερχόμαστε, Αχαιοί που μύριοι ανέμοι μάς πέταξαν στης θάλασσας τα τρίσβαθα τα πλάτια. Πατρίδα θέλαμε, κι αλλού μάς φέραν άλλοι δρόμοι· τέτοιο του Δία στάθηκε το θέλημα κι η γνώμη. Και λέμε απ' του Αγαμέμνονα του γιού του Ατρέα τ' ασκέρι πως είμαστε",
-    repository: "https://github.com/TiagoBonoraBraga/modulo2proj1",
+    description: "Projeto El-Geladon - Cardápio de Paletas Mexicanas, Este projeto foi desenvolvido com o objetivo de proporcionar uma experiência moderna e interativa aos clientes da paleteria El-Geladon, ao mesmo tempo em que facilita a gestão e atualização do cardápio para a equipe. Utilizamos o React.js como framework principal para desenvolver a interface do usuário. O React.js é ideal para criar componentes reutilizáveis e uma experiência responsiva e para sua estilização, empregamos o Styled-Components. Essa biblioteca permite criar estilos de forma modular e dinâmica, integrando-os diretamente com os componentes React. ",
+    repository: "https://github.com/TiagoBonoraBraga/Front-ElgeladonReact",
     deploy: "www.jogodohumor.cia.tv",
   },
+  // {
+  //   image: FoodBox,
+  //   title: "Pizza fresh",
+  //   description: "Projeto Pizza Fresh,  Είπε, κι εμάς μάς έκοψε μεμιάς τα ήπατά μας το μουγκρητό του το βαρύ    κι η όψη η γιγαντένια. Όμως του απολογήθηκα κι αυτά τα λόγια του είπα· Από την Τροία ερχόμαστε, Αχαιοί που μύριοι ανέμοι μάς πέταξαν στης θάλασσας τα τρίσβαθα τα πλάτια. Πατρίδα θέλαμε, κι αλλού μάς φέραν άλλοι δρόμοι· τέτοιο του Δία στάθηκε το θέλημα κι η γνώμη. Και λέμε απ' του Αγαμέμνονα του γιού του Ατρέα τ' ασκέρι πως είμαστε",
+  //   repository: "https://github.com/TiagoBonoraBraga/modulo2proj1",
+  //   deploy: "www.jogodohumor.cia.tv",
+  // },
   {
-    image: FoodBox,
-    title: "Pizza fresh",
-    description: "Projeto Pizza Fresh,  Είπε, κι εμάς μάς έκοψε μεμιάς τα ήπατά μας το μουγκρητό του το βαρύ    κι η όψη η γιγαντένια. Όμως του απολογήθηκα κι αυτά τα λόγια του είπα· Από την Τροία ερχόμαστε, Αχαιοί που μύριοι ανέμοι μάς πέταξαν στης θάλασσας τα τρίσβαθα τα πλάτια. Πατρίδα θέλαμε, κι αλλού μάς φέραν άλλοι δρόμοι· τέτοιο του Δία στάθηκε το θέλημα κι η γνώμη. Και λέμε απ' του Αγαμέμνονα του γιού του Ατρέα τ' ασκέρι πως είμαστε",
-    repository: "https://github.com/TiagoBonoraBraga/modulo2proj1",
-    deploy: "www.jogodohumor.cia.tv",
-  },
-  {
-    image: FoodBox,
+    image: OldGames,
     title: "Old-Games",
-    description: "Projeto Old-Games,  Είπε, κι εμάς μάς έκοψε μεμιάς τα ήπατά μας το μουγκρητό του το βαρύ    κι η όψη η γιγαντένια. Όμως του απολογήθηκα κι αυτά τα λόγια του είπα· Από την Τροία ερχόμαστε, Αχαιοί που μύριοι ανέμοι μάς πέταξαν στης θάλασσας τα τρίσβαθα τα πλάτια. Πατρίδα θέλαμε, κι αλλού μάς φέραν άλλοι δρόμοι· τέτοιο του Δία στάθηκε το θέλημα κι η γνώμη. Και λέμε απ' του Αγαμέμνονα του γιού του Ατρέα τ' ασκέρι πως είμαστε",
-    repository: "https://github.com/TiagoBonoraBraga/modulo2proj1",
+    description: "Projeto Old-Games - É com entusiasmo que apresento o projeto Old Games, um catálogo online dedicado a jogos antigos, desenvolvido com tecnologias modernas para oferecer uma experiência dinâmica e informativa aos entusiastas de jogos retrô. Utilizamos o React.js juntamente com TypeScript para criar uma base sólida e tipada para o desenvolvimento do frontend. O TypeScript adiciona um nível extra de robustez ao código, ajudando a evitar erros comuns e a facilitar o trabalho em equipe. Para estilização, optamos pelo Styled-Components. Essa biblioteca permite criar estilos de forma componentizada e dinâmica, integrando-os diretamente com os componentes React. Isso promove uma manutenção mais fácil e evita problemas de escopo de estilos.",
+    repository: "https://github.com/TiagoBonoraBraga/oldgamesfrontend",
     deploy: "www.jogodohumor.cia.tv",
   },
 ];
