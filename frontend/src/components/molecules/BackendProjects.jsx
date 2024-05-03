@@ -6,7 +6,7 @@ import CustomCard from "../atoms/CustomCard";
 export default function BackendProjects() {
   return (
     <>
-      <h2 className="flex justify-center mt-10 text-lg ffont-bold tracking-wider dark:text-white-500">Projetos Backend</h2>
+      <h2 className="flex justify-center mt-10 text-lg font-bold tracking-wider dark:text-white-500">Projetos Backend</h2>
       <div className="flex flex-row justify-center items-center w-2/3 gap-5">
 
 
@@ -30,8 +30,8 @@ export default function BackendProjects() {
                 {backendProject.description}
               </p>
 
-              <Link href="https://github.com/TiagoBonoraBraga/TiagoDev" className="flex justify-center items-center mb-3">Repositório GitHub</Link>
-              <Link href="https://www.foodbox.cia.tv" className="flex justify-center items-center mb-3">www.foodbox.cia.tv</Link>
+              <Link href={backendProject.repository} className="flex justify-center items-center mb-3">Repositório GitHub</Link>
+              <Link href={backendProject.deploy} className="flex justify-center items-center mb-3">{backendProject.deploy}</Link>
 
             </div>
           </CustomCard>

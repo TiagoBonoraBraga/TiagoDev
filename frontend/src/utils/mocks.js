@@ -24,6 +24,10 @@ import Protech from "@/public/images/protech.png";
 import Bola from "@/public/images/bola.png";
 import Elgeladon from "@/public/images/elGeladon.png";
 import OldGames from "@/public/images/oldgames.png";
+import JunkieDust from "@/public/images/junkiedust.png";
+import Fpinfo from "@/public/images/fpinfo.png";
+import Ogait from "@/public/images/ogait.png";
+import Backend from "@/public/images/backend.png";
 
 
 
@@ -142,35 +146,35 @@ export const reactProjects = [
 
 export const nextProjects = [
   {
-    image: FoodBox,
-    title: "Cliniar",
-    description: "Projeto Cliniar,  Είπε, κι εμάς μάς έκοψε μεμιάς τα ήπατά μας το μουγκρητό του το βαρύ    κι η όψη η γιγαντένια. Όμως του απολογήθηκα κι αυτά τα λόγια του είπα· Από την Τροία ερχόμαστε, Αχαιοί που μύριοι ανέμοι μάς πέταξαν στης θάλασσας τα τρίσβαθα τα πλάτια. Πατρίδα θέλαμε, κι αλλού μάς φέραν άλλοι δρόμοι· τέτοιο του Δία στάθηκε το θέλημα κι η γνώμη. Και λέμε απ' του Αγαμέμνονα του γιού του Ατρέα τ' ασκέρι πως είμαστε",
-    repository: "https://github.com/TiagoBonoraBraga/modulo2proj1",
-    deploy: "www.jogodohumor.cia.tv",
+    image: JunkieDust,
+    title: "Junkie Dust",
+    description: "Projeto Junkie Dust, É com grande entusiasmo que apresento o Junkie Dust Player, uma plataforma online dedicada a bandas e músicos, permitindo que eles compartilhem suas composições, fotos e letras de músicas de forma interativa e envolvente.  Utilizamos o Next.js, um framework React com funcionalidades avançadas, juntamente com Typescript, como geração estática e pré-renderização, para criar uma aplicação robusta e otimizada. Para estilização, adotamos o Tailwind CSS, uma biblioteca de utilitários CSS altamente customizável. Em resumo, o Junkie Dust Player é mais do que uma simples plataforma de música. É um espaço dedicado à expressão artística, onde bandas e músicos podem conectar-se com os fãs e compartilhar sua paixão pela música de forma autêntica e significativa. ",
+    repository: "https://github.com/TiagoBonoraBraga/junkiedust",
+    deploy: "www.junkiedust.com",
   },
   {
-    image: FoodBox,
+    image: Fpinfo,
     title: "Fpinfo",
-    description: "Projeto Fpinfo,  Είπε, κι εμάς μάς έκοψε μεμιάς τα ήπατά μας το μουγκρητό του το βαρύ    κι η όψη η γιγαντένια. Όμως του απολογήθηκα κι αυτά τα λόγια του είπα· Από την Τροία ερχόμαστε, Αχαιοί που μύριοι ανέμοι μάς πέταξαν στης θάλασσας τα τρίσβαθα τα πλάτια. Πατρίδα θέλαμε, κι αλλού μάς φέραν άλλοι δρόμοι· τέτοιο του Δία στάθηκε το θέλημα κι η γνώμη. Και λέμε απ' του Αγαμέμνονα του γιού του Ατρέα τ' ασκέρι πως είμαστε",
-    repository: "https://github.com/TiagoBonoraBraga/modulo2proj1",
+    description: "Projeto Fpinfo, Estou empolgado em apresentar o projeto Fpinfo, uma empresa especializada em construção de sites modernos e soluções tecnológicas, desenvolvido com tecnologias avançadas para oferecer produtos de alta qualidade aos nossos clientes. Em resumo, a Fpinfo é uma empresa comprometida em oferecer soluções tecnológicas inovadoras e personalizadas para construção de sites e aplicações web. Com o uso de tecnologias como Next.js, TypeScript e Tailwind CSS, buscamos superar as expectativas de nossos clientes e impulsionar seus negócios para o próximo nível. O Next.js é um framework React com funcionalidades avançadas, como pré-renderização, geração estática e suporte a TypeScript. Para estilização, utilizamos o Tailwind CSS, uma biblioteca de utilitários CSS altamente customizável. ",
+    repository: "",
     deploy: "www.fpinfo.com",
   },
   {
-    image: FoodBox,
-    title: "Tiago Dev",
-    description: "Projeto Tiago Dev,  Είπε, κι εμάς μάς έκοψε μεμιάς τα ήπατά μας το μουγκρητό του το βαρύ    κι η όψη η γιγαντένια. Όμως του απολογήθηκα κι αυτά τα λόγια του είπα· Από την Τροία ερχόμαστε, Αχαιοί που μύριοι ανέμοι μάς πέταξαν στης θάλασσας τα τρίσβαθα τα πλάτια. Πατρίδα θέλαμε, κι αλλού μάς φέραν άλλοι δρόμοι· τέτοιο του Δία στάθηκε το θέλημα κι η γνώμη. Και λέμε απ' του Αγαμέμνονα του γιού του Ατρέα τ' ασκέρι πως είμαστε",
-    repository: "https://github.com/TiagoBonoraBraga/modulo2proj1",
-    deploy: "www.jogodohumor.cia.tv",
+    image: Ogait,
+    title: "Ogait Ashtar",
+    description: "Projeto Tiago Dev, Estou animado em apresentar o projeto Ogait Ashtar, um portfólio multifacetado que destaca as habilidades musicais do guitarrista Ogait Ashtar, bem como seus interesses esportivos em patins inline e trilhas pela natureza. Em resumo, o projeto Ogait Ashtar é mais do que um simples portfólio - é uma narrativa visual e interativa que celebra a versatilidade e paixões de Ogait Ashtar, desde sua música até suas aventuras esportivas. Estamos entusiasmados em compartilhar esta iniciativa e ansiosos para ver como ela inspirará outros e fortalecerá a comunidade criativa e esportiva. Utilizamos o Next.js, um framework React com funcionalidades avançadas de renderização, para criar uma aplicação web eficiente e otimizada. Para estilização, adotamos o Tailwind CSS, uma biblioteca de utilitários CSS que permite criar designs modernos de forma rápida e customizável.",
+    repository: "https://github.com/TiagoBonoraBraga/ogaitashtar",
+    deploy: "www.ogaitashtar.cia.tv",
   },
 ];
 
 export const backendProjects = [
   {
-    image: FoodBox,
+    image: Backend,
     title: "Backend - El-Geladon",
-    description: "Projeto Backend - El-Geladon,  Είπε, κι εμάς μάς έκοψε μεμιάς τα ήπατά μας το μουγκρητό του το βαρύ    κι η όψη η γιγαντένια. Όμως του απολογήθηκα κι αυτά τα λόγια του είπα· Από την Τροία ερχόμαστε, Αχαιοί που μύριοι ανέμοι μάς πέταξαν στης θάλασσας τα τρίσβαθα τα πλάτια. Πατρίδα θέλαμε, κι αλλού μάς φέραν άλλοι δρόμοι· τέτοιο του Δία στάθηκε το θέλημα κι η γνώμη. Και λέμε απ' του Αγαμέμνονα του γιού του Ατρέα τ' ασκέρι πως είμαστε",
-    repository: "https://github.com/TiagoBonoraBraga/modulo2proj1",
-    deploy: "www.jogodohumor.cia.tv",
+    description: "Projeto Backend - El-Geladon - Projeto backend que implementa operações CRUD (Create, Read, Update, Delete) utilizando Node.js, Express e MongoDB. Essas tecnologias são comumente combinadas para criar aplicativos web ou APIs que manipulam dados de forma eficiente e escalável. Um projeto backend com Node.js, Express e MongoDB para implementar operações CRUD oferece uma maneira eficiente e flexível de criar APIs e aplicativos web que manipulam dados em um banco de dados NoSQL como o MongoDB. Essa combinação de tecnologias é amplamente utilizada na indústria para construir sistemas escaláveis e de alto desempenho.",
+    repository: "https://github.com/TiagoBonoraBraga/elgeladon",
+    deploy: "",
   }
 ]
 

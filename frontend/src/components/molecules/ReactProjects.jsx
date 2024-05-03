@@ -15,7 +15,7 @@ export default function ReactProject() {
             <div className="flex justify-center items-center p-3">
               <Image
                 src={reactProject.image}
-                width={200}
+                width={300}
                 height={200}
                 alt="Project"
                 className="rounded"

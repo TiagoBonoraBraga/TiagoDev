@@ -15,7 +15,7 @@ export default function NextProjects() {
             <div className="flex justify-center items-center p-3">
               <Image
                 src={nextProject.image}
-                width={200}
+                width={300}
                 height={200}
                 alt="Project"
                 className="rounded"
@@ -30,8 +30,8 @@ export default function NextProjects() {
                 {nextProject.description}
               </p>
 
-              <Link href="https://github.com/TiagoBonoraBraga/TiagoDev" className="flex justify-center items-center mb-3">Repositório GitHub</Link>
-              <Link href="https://www.foodbox.cia.tv" className="flex justify-center items-center mb-3">www.foodbox.cia.tv</Link>
+              <Link href={nextProject.repository} className="flex justify-center items-center mb-3">Repositório GitHub</Link>
+              <Link href={nextProject.deploy} className="flex justify-center items-center mb-3">{nextProject.deploy}</Link>
             </div>
           </CustomCard>
         )}
