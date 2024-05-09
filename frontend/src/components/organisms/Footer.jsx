@@ -1,10 +1,10 @@
 
 const Footer = () => {
   return (
-    <footer className="  w-full bg-blue-300 tracking-wider dark:bg-black-400 ">
+    <footer className="  w-full ss:w-full bg-blue-300 tracking-wider dark:bg-black-400 ">
       <div
         className="
-          container flex flex-col flex-wrap px-4 tracking-wider overflow-auto mx-auto md:items-center lg:items-start md:flex-row md:flex-nowrap"
+          flex flex-col flex-wrap px-4 tracking-wider overflow-auto mx-auto md:items-center lg:items-start md:flex-row md:flex-nowrap"
       >
         <div className="flex-shrink-0 w-64 mx-auto text-center mt-10 text-blue-300 md:mx-0 md:text-left ">
           <a

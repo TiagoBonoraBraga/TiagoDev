@@ -8,7 +8,7 @@ export default function WordPress() {
       <h2 className="flex justify-center mt-10 text-lg font-bold tracking-wider dark:text-white-500">
         Projetos WordPress
       </h2>
-      <div className="flex flex-row justify-center items-center w-2/3 gap-5">
+      <div className="flex flex-row ss:flex-col justify-center items-center w-2/3 ss:ss:w-[120%] gap-5">
         {wordpressProjects.map((wordpressProject, index) => (
           // <div
           //   key={index}

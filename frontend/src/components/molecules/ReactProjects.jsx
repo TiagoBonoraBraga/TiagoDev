@@ -5,8 +5,8 @@ import CustomCard from "../atoms/CustomCard";
 export default function ReactProject() {
   return (
     <>
-      <h2 className="flex justify-center mt-10 text-lg font-bold tracking-wider dark:text-white-500">Projetos React.js</h2>
-      <div className="flex flex-row justify-center items-center w-2/3 gap-5">
+      <h2 className="flex justify-center items-center mt-10 text-lg font-bold tracking-wider dark:text-white-500">Projetos React.js</h2>
+      <div className="flex flex-row ss:flex-col justify-center items-center w-2/3 ss:ss:w-[120%] gap-5">
 
 
 

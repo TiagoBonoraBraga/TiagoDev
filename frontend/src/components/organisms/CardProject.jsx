@@ -7,7 +7,7 @@ import WordPressProjects from "../molecules/WordPressProjects";
 export default function CardProject() {
   return (
     <>
-      <section className="flex flex-col justify-center items-center">
+      <section className="flex flex-col justify-center items-center ss:w-full">
         <ReactProjects />
         <NextProjects />
         <VanillaProjects />
