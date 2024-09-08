@@ -7,7 +7,7 @@ export default function BackendProjects() {
   return (
     <>
       <h2 className="flex justify-center mt-10 text-lg font-bold tracking-wider dark:text-white-500">Projetos Backend</h2>
-      <div className="flex flex-row ss:flex-col justify-center items-center w-2/3 ss:ss:w-[120%] gap-5">
+      <div className="flex flex-row ss:flex-col justify-center items-center w-2/3 ss:w-[120%] gap-5">
 
 
         {backendProjects.map((backendProject, index) =>
