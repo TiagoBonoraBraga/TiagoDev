@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { reactProjects } from '@/utils/mocks'
+import { reactProjects } from '../../utils/mocks'
 import CustomCard from "../atoms/CustomCard";
 export default function ReactProject() {
   return (

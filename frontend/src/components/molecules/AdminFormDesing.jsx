@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { api } from "@/utils/api";
+import { api } from "../../utils/api";
 import CustomInput from "../atoms/CustomInput"
 import CustomButton from "../atoms/CustomButton";
 import { toast } from 'react-toastify'

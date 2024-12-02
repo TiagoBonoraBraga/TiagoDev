@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { backendProjects } from '@/utils/mocks';
+import { backendProjects } from '../..//utils/mocks';
 import CustomCard from "../atoms/CustomCard";
 
 export default function BackendProjects() {

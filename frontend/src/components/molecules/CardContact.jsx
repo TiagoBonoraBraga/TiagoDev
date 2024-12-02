@@ -1,4 +1,4 @@
-import { FormatData } from "@/utils/functions";
+import { FormatData } from "../../utils/functions";
 
 
 export default function CardContact({contact}) {

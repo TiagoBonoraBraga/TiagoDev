@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { api } from "@/utils/api";
+import { api } from "../../utils/api";
 import CustomInput from "../atoms/CustomInput";
 import CustomLabel from "../atoms/CustomLabel";
 import CustomCheckbox from "../atoms/CustomCheckbox";

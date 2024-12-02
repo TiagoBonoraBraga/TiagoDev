@@ -1,10 +1,10 @@
-import { api } from "@/utils/api";
+import { api } from "../../utils/api";
 import { useState } from "react";
 import Image from "next/image";
 import CustomButton from "../atoms/CustomButton";
 import CustomLabel from "../atoms/CustomLabel";
 import CustomTitle from "../atoms/CustomTitle";
-import Contact from '@/public/images/contact.jpg'
+import Contact from '../../../public/images/contact.jpg'
 import CustomInput from "../atoms/CustomInput";
 
 export default function ContactForm() {

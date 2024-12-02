@@ -3,29 +3,29 @@ import AdminCardTecno from "@/components/organisms/AdminCardTecno";
 import AdminCardProjects from "@/components/organisms/AdminCardProjects";
 import LayoutAdm from '@/components/templates/LayoutAdm';
 
-export async function getServerSideProps(context) {
-    const cookies = nookies.get(context);
-    console.log('cookies', cookies);
-    const SECRET_PASSWORD = '123456'
-    const USERPASSWORD = cookies.SECRET_PASSWORD;
-    const isAuthorized = SECRET_PASSWORD === USERPASSWORD;
+// export async function getServerSideProps(context) {
+//     const cookies = nookies.get(context);
+//     console.log('cookies', cookies);
+//     const SECRET_PASSWORD = '123456'
+//     const USERPASSWORD = cookies.SECRET_PASSWORD;
+//     const isAuthorized = SECRET_PASSWORD === USERPASSWORD;
     
-    if(!isAuthorized){
-      console.log('NÂO Autorizado');
-      return {
-        redirect: {
-          permanent: false,
-          destination: '/login',
-        }
-      };  
-    }
-    console.log('Autorizado!!!');
-    return {
-      props: {}
-    }
-  } 
+//     if(!isAuthorized){
+//       console.log('NÂO Autorizado');
+//       return {
+//         redirect: {
+//           permanent: false,
+//           destination: '/login',
+//         }
+//       };  
+//     }
+//     console.log('Autorizado!!!');
+//     return {
+//       props: {}
+//     }
+//   } 
 
-export default function Register(props) {
+export default function Registe() {
     return (
         <>
         <LayoutAdm>

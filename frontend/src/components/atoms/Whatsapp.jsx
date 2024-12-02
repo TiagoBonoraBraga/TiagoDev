@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import whatsappLogo from "../../public/assets/whatsap.png";
+import whatsappLogo from "../../../public/assets/whatsap.png";
 
 const whatsapp = () => {
   return (

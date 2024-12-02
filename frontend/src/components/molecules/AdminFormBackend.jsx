@@ -2,7 +2,7 @@ import { useState } from "react"
 import CustomInput from "../atoms/CustomInput"
 
 import CustomButton from "../atoms/CustomButton";
-import { api } from "@/utils/api";
+import { api } from "../../utils/api";
 import { toast } from 'react-toastify'
 
 export default function AdminFormBackend() {

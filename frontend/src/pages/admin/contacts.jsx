@@ -1,6 +1,6 @@
 import CardContact from "@/components/molecules/CardContact";
 import { useState, useEffect } from "react";
-import { api } from "@/utils/api";
+import { api } from "../../utils/api";
 import { toast } from 'react-toastify'
 import LayoutAdm from "@/components/templates/LayoutAdm";
 

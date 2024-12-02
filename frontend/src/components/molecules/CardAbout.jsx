@@ -1,5 +1,5 @@
 import Image from "next/image";
-import profile from "@/public/images/profile.png";
+import profile from "../../../public/images/profile.png";
 export default function CardAbout() {
   return (
     <>

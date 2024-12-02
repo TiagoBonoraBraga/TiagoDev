@@ -3,7 +3,7 @@ import {
   imagens,
   imagensBackend,
   imagesDesing,
-} from "@/utils/mocks";
+} from "../../utils/mocks";
 import CustomTitle from "../atoms/CustomTitle";
 
 
