@@ -8,14 +8,14 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    screens: {
-      ss: { max: '1030px'},
-      s:  '820px',
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
-      sx: {max: '770px'}
+    screens: {          
+      ...defaultTheme.screens,  
+      xs: '475px', // Tamanho pequeno para dispositivos móveis
+      sm: '640px', // Dispositivos móveis (padrão de "sm" do Tailwind)
+      md: '768px', // Tablets (padrão de "md" do Tailwind)
+      lg: '1024px', // Telas maiores como laptops (padrão de "lg" do Tailwind)
+      xl: '1280px', // Telas grandes como desktops (padrão de "xl" do Tailwind)
+      '2xl': '1536px' // Telas muito grandes, como monitores widescreen (padrão de "2xl")
     },
     colors: {
       black:{
