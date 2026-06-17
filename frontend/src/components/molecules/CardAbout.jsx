@@ -15,7 +15,7 @@ export default function CardAbout() {
               className="rounded-full"
             />
           </div>
-          <div className="border border-blue-300 bg-blue-200 dark:bg-gray-200 bg-opacity-20 mb-10 mr-5 ss:mr-0 ss:flex ss:justify-center  rounded p-4 flex flex-col justify-between leading-normal">
+          <div className="border border-blue-300 bg-blue-200/20 dark:bg-gray-200 mb-10 mr-5 ss:mr-0 ss:flex ss:justify-center  rounded p-4 flex flex-col justify-between leading-normal">
             <div className="mb-8">
               <p className="text-sm text-gray-600 flex items-center">
                 Sobre mim...

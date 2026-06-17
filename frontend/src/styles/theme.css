@@ -1,0 +1,57 @@
+/* =========================================================================
+   THEME — fonte única de verdade das cores do site.
+   Para trocar qualquer cor, altere AQUI. O Tailwind referencia estas
+   variáveis (mapeamento em globals.css, via @theme), então a mudança
+   reflete em todo o site de uma vez.
+
+   - Tokens "de marca" (black/gray/blue/...) mantêm os valores antigos.
+   - Tokens "semânticos" (paper/ink/muted/line/accent) são o tema novo e
+     trocam sozinhos no dark mode (bloco .dark abaixo) — sem precisar de
+     classes dark: espalhadas pelos componentes.
+   ========================================================================= */
+
+:root {
+  /* --- Escala de marca (compatível com o que já existia) --- */
+  --black-500: #000000;
+  --black-400: #0d0d0d;
+  --black-300: #191919;
+  --black-200: #262626;
+  --black-100: #303030;
+
+  --gray-100: #dfdfdf;
+  --gray-200: #dcdcde;
+  --gray-300: #4c594f;
+  --gray-400: #535353;
+
+  --white-500: #ffffff;
+
+  --blue-100: #6274e5;
+  --blue-200: #4a64d2;
+  --blue-300: #3155c0;
+  --blue-400: #1945ad;
+  --blue-500: #00359a;
+
+  --yellow-500: #ffff00;
+
+  /* --- Tokens semânticos (tema claro = padrão) --- */
+  --paper: #fbfbfc;       /* fundo da página */
+  --paper-soft: #e8edf5;  /* fundo de seções alternadas / superfícies sutis */
+  --ink: #0e1116;         /* texto e títulos principais */
+  --ink-soft: #39414e;    /* títulos um pouco mais suaves */
+  --muted: #5b6470;       /* texto secundário */
+  --line: #e6e7eb;        /* divisórias finas / bordas */
+  --accent: #2d4bd8;      /* cor de destaque (links, CTA, assinatura) */
+  --accent-soft: #6274e5; /* variação clara do destaque */
+}
+
+/* --- Dark mode: só os tokens semânticos invertem --- */
+.dark {
+  --paper: #0b0d10;
+  --paper-soft: #14171c;
+  --ink: #f3f4f6;
+  --ink-soft: #c7ccd4;
+  --muted: #9aa3af;
+  --line: #232830;
+  --accent: #6274e5;
+  --accent-soft: #2d4bd8;
+}

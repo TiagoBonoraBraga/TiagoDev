@@ -1,99 +1,95 @@
-import { useState } from "react";
-import Link from 'next/link';
-import CustomLogo from "@/components/atoms/CustomLogo";
-import ThemeToggle from "@/components/atoms/ThemeToggle";
+import { useState } from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { FiMenu, FiX } from 'react-icons/fi'
+import CustomLogo from '@/components/atoms/CustomLogo'
+import ThemeToggle from '@/components/atoms/ThemeToggle'
 
-const Header = () => {
-  const [navbar, setNavbar] = useState(false);
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'Sobre' },
+  { href: '/projects', label: 'Projetos' },
+  { href: '/contact', label: 'Contato' },
+]
+
+export default function Header() {
+  const [open, setOpen] = useState(false)
+  const { pathname } = useRouter()
 
   return (
-    <nav className="fixed top-0 z-10 w-full bg-blue-300 tracking-wider dark:bg-black-400 shadow">
-      <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
-        <div>
-          <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <CustomLogo />
-            <div className="md:hidden flex flex-row">
-              <div>
-                <ThemeToggle />
-              </div>
-              <button
-                className="flex flex-row justify-center items-center gap-5 text-black-500 rounded-md outline-none"
-                onClick={() => setNavbar(!navbar)}
-              >
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-paper/80 backdrop-blur">
+      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+        <CustomLogo />
 
-                {navbar ? (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6 text-white-500"
-                    viewBox="0 0 20 20"
-                    fill="white"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6 text-white-500"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                )}
-              </button>
-             
-            </div>
-          </div>
-        </div>
-        <div>
-          <div
-            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"
-              }`}
-          >
-            <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-              <li className="text-white-500 hover:text-white-500 hover:text-lg">
-                <a href="/">Home</a>
-              </li>
-              <li className="text-white-500 hover:text-white-500 hover:text-lg">
-                <a href="/about">Sobre</a>
-              </li>
-              <li className="text-white-500 hover:text-white-500 hover:text-lg">
-                <a href="/projects">Projetos</a>
-              </li>
-              <li className="text-white-500 hover:text-white-500 hover:text-lg">
-                <a href="/contact">Contato</a>
-              </li>
-              <li className="text-white-500 hover:text-white-500 hover:text-lg">
-                <a href="/about">Ogait Ashtar</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="sx:hidden" >
+        <ul className="hidden items-center gap-8 md:flex">
+          {links.map(({ href, label }) => (
+            <li key={href}>
+              <Link
+                href={href}
+                className={`text-sm transition-colors ${
+                  pathname === href ? 'text-ink' : 'text-muted hover:text-ink'
+                }`}
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <div className="hidden items-center gap-4 md:flex">
           <ThemeToggle />
-        </div>
-        <div className="hidden space-x-2 md:inline-block">
           <Link
             href="/login"
-            className="px-4 py-2 text-blue-300 bg-white-500 rounded-md shadow hover:bg-blue-500 hover:text-white-500"
+            className="rounded-full border border-line px-4 py-1.5 text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent"
           >
             Login
           </Link>
-
         </div>
-      </div>
-    </nav>
-  );
-};
 
-export default Header;
+        <div className="flex items-center gap-3 md:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-label={open ? 'Fechar menu' : 'Abrir menu'}
+            aria-expanded={open}
+            className="text-ink"
+          >
+            {open ? <FiX size={24} /> : <FiMenu size={24} />}
+          </button>
+        </div>
+      </nav>
+
+      {open && (
+        <div className="border-t border-line bg-paper md:hidden">
+          <ul className="mx-auto flex max-w-6xl flex-col gap-1 px-6 py-4">
+            {links.map(({ href, label }) => (
+              <li key={href}>
+                <Link
+                  href={href}
+                  onClick={() => setOpen(false)}
+                  className={`block rounded-lg px-3 py-2 text-sm transition-colors ${
+                    pathname === href
+                      ? 'bg-paper-soft text-ink'
+                      : 'text-muted hover:bg-paper-soft hover:text-ink'
+                  }`}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+            <li className="mt-2">
+              <Link
+                href="/login"
+                onClick={() => setOpen(false)}
+                className="block rounded-full border border-line px-4 py-2 text-center text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent"
+              >
+                Login
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
+    </header>
+  )
+}

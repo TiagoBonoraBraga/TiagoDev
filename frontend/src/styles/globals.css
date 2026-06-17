@@ -1,28 +1,98 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "./theme.css";
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* Dark mode por classe: o ThemeToggle adiciona/remove .dark no <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Mapeia os tokens do Tailwind para as variáveis do theme.css.
+   "inline" faz os utilitários referenciarem as variáveis diretamente,
+   então os tokens semânticos (paper/ink/muted/line/accent) trocam
+   sozinhos no dark mode, sem precisar de classes dark: espalhadas. */
+@theme inline {
+  --color-black-500: var(--black-500);
+  --color-black-400: var(--black-400);
+  --color-black-300: var(--black-300);
+  --color-black-200: var(--black-200);
+  --color-black-100: var(--black-100);
+
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-300: var(--gray-300);
+  --color-gray-400: var(--gray-400);
+
+  --color-white-500: var(--white-500);
+
+  --color-blue-100: var(--blue-100);
+  --color-blue-200: var(--blue-200);
+  --color-blue-300: var(--blue-300);
+  --color-blue-400: var(--blue-400);
+  --color-blue-500: var(--blue-500);
+
+  --color-yellow-500: var(--yellow-500);
+
+  --color-paper: var(--paper);
+  --color-paper-soft: var(--paper-soft);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+
+  --font-sans: var(--ff-body), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: var(--ff-display), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--ff-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* Tokens estáticos: breakpoint extra e animações */
+@theme {
+  --breakpoint-xs: 475px;
+
+  --animate-caret-blink: caret-blink 1.1s steps(1, end) infinite;
+  --animate-fade-up: fade-up 0.6s ease-out both;
+
+  @keyframes caret-blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+  }
+
+  @keyframes fade-up {
+    0% { opacity: 0; transform: translateY(14px); }
+    100% { opacity: 1; transform: translateY(0); }
   }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@layer base {
+  /* Compat: borda sem cor usa a linha do tema (no v4 o padrão seria currentColor) */
+  *,
+  ::before,
+  ::after {
+    border-color: var(--line);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: #fff;
+  }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
- 
+/* Acessibilidade: respeita quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
