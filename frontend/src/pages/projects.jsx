@@ -1,14 +1,18 @@
-import CardProject from "@/components/organisms/CardProject";
-import SeoHead from "@/components/organisms/SeoHead";
-import Layout from "@/components/templates/Layout";
+import Layout from '@/components/templates/Layout'
+import SeoHead from '@/components/organisms/SeoHead'
+import ProjectsHero from '@/components/organisms/ProjectsHero'
+import CardProject from '@/components/organisms/CardProject'
+import ContactCta from '@/components/molecules/ContactCta'
+import Whatsapp from '@/components/atoms/Whatsapp'
 
 export default function Projects() {
   return (
-    <>
-      <Layout>
-        <SeoHead />
-        <CardProject />
-      </Layout>
-    </>
-  );
+    <Layout>
+      <SeoHead />
+      <ProjectsHero />
+      <CardProject />
+      <ContactCta />
+      <Whatsapp />
+    </Layout>
+  )
 }
