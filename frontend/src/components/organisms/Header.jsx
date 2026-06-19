@@ -10,6 +10,7 @@ const links = [
   { href: '/about', label: 'Sobre' },
   { href: '/projects', label: 'Projetos' },
   { href: '/contact', label: 'Contato' },
+  { href: 'https://ogaitashtar.cia.tv', label: 'Ogait Ashtar' },
 ]
 
 export default function Header() {

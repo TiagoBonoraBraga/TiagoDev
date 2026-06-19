@@ -47,10 +47,10 @@ export default function Footer() {
             Contato
           </span>
           <a
-            href="mailto:ogait.desenvolvedor.jr@gmail.com"
+            href="mailto:ogait.desenvolvedor@gmail.com"
             className="text-sm text-ink/80 transition-colors hover:text-accent"
           >
-            ogait.desenvolvedor.jr@gmail.com
+            ogait.desenvolvedor@gmail.com
           </a>
           <a
             href="tel:+5541988082384"

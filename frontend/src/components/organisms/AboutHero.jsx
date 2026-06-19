@@ -4,7 +4,7 @@ import { FiArrowUpRight } from 'react-icons/fi'
 import profile from '../../../public/images/profile.png'
 
 const stats = [
-  { value: '10+', label: 'projetos entregues' },
+  { value: 'Soluções', label: 'para empresas e educação' },
   { value: 'Full-stack', label: 'front · back · design' },
   { value: 'Curitiba', label: 'BR · remoto' },
 ]

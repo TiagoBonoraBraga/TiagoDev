@@ -4,7 +4,22 @@ import { FiArrowUpRight, FiGithub, FiLinkedin } from 'react-icons/fi'
 export default function ContactCta() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
-      <div className="relative isolate overflow-hidden rounded-3xl bg-ink px-8 py-14 md:px-14 md:py-20">
+      {/* Banner sempre escuro: forçamos os tokens do tema claro neste subtree,
+          então o fundo continua "ink" (escuro) e o texto "paper" (claro) tanto
+          no light quanto no dark mode — sem inverter as cores. */}
+      <div
+        style={{
+          '--paper': '#fbfbfc',
+          '--paper-soft': '#e8edf5',
+          '--ink': '#0e1116',
+          '--ink-soft': '#39414e',
+          '--muted': '#5b6470',
+          '--line': '#e6e7eb',
+          '--accent': '#2d4bd8',
+          '--accent-soft': '#6274e5',
+        }}
+        className="relative isolate overflow-hidden rounded-3xl bg-ink px-8 py-14 md:px-14 md:py-20"
+      >
         {/* brilho + textura decorativos */}
         <div
           aria-hidden="true"
@@ -29,10 +44,10 @@ export default function ContactCta() {
 
           <div className="flex flex-col items-start gap-5 md:items-end">
             <a
-              href="mailto:ogait.desenvolvedor.jr@gmail.com"
+              href="mailto:ogait.desenvolvedor@gmail.com"
               className="font-mono text-sm text-paper/70 transition-colors hover:text-accent-soft md:text-base"
             >
-              ogait.desenvolvedor.jr@gmail.com
+              ogait.desenvolvedor@gmail.com
             </a>
             <div className="flex items-center gap-3">
               <Link
