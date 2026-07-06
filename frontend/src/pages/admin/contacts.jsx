@@ -1,6 +1,5 @@
 import CardContact from "@/components/molecules/CardContact";
 import { useState, useEffect } from "react";
-import { api } from "../../utils/api";
 import { toast } from 'react-toastify'
 import LayoutAdm from "@/components/templates/LayoutAdm";
 
@@ -14,8 +13,8 @@ export default function Contacts() {
   async function ContactsData() {
     setLoading(true);
     try {
-      const contacts = await api.getContacts();
-      console.log("conteudo", contacts);
+      // TODO: integrar com o backend (NestJS) — listagem de contatos.
+      const contacts = [];
       setContacts(contacts);
     } catch (error) {
       setError(true);

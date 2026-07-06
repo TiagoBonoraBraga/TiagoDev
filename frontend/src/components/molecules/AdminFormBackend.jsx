@@ -2,7 +2,6 @@ import { useState } from "react"
 import CustomInput from "../atoms/CustomInput"
 
 import CustomButton from "../atoms/CustomButton";
-import { api } from "../../utils/api";
 import { toast } from 'react-toastify'
 
 export default function AdminFormBackend() {
@@ -15,9 +14,8 @@ export default function AdminFormBackend() {
         const backendPayload = {
             image: img,
         }
-        console.log("back", backendPayload);
-        const backendData = await api.createBackend({data: backendPayload });
-        console.log("back", backendData);
+        // TODO: integrar com o backend (NestJS) — cadastro de tecnologia backend.
+        const backendData = null;
         if(!backendData){
             toast.error('Erro ao cadastrar')     
           } else {

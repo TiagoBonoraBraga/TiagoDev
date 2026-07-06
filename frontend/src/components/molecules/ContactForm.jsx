@@ -9,7 +9,6 @@ import {
   FiCheckCircle,
   FiAlertCircle,
 } from 'react-icons/fi'
-import { api } from '../../utils/api'
 
 const channels = [
   {
@@ -117,7 +116,10 @@ export default function ContactForm() {
     if (Object.keys(nextErrors).length > 0) return
 
     setStatus('sending')
-    const response = await api.createContact({ data: { ...values } })
+
+    // TODO: integrar com o backend (NestJS) — envio do formulário de contato.
+    // Enquanto o backend não existir, o envio fica inativo.
+    const response = null
 
     if (response) {
       setStatus('success')

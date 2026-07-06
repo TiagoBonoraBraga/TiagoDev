@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { api } from "../../utils/api";
 import CustomInput from "../atoms/CustomInput";
 import CustomLabel from "../atoms/CustomLabel";
 import CustomCheckbox from "../atoms/CustomCheckbox";
@@ -26,9 +25,8 @@ export default function AdminCardProjects() {
             deploy: deploy,
             types: technologies,
         }
-        console.log("projects", projectsPayload);
-        const projectsData = await api.createProjects({data: projectsPayload});
-        console.log("proj", projectsData);
+        // TODO: integrar com o backend (NestJS) — cadastro de projetos.
+        const projectsData = null;
         if(!projectsData){
             toast.error('Erro ao cadastrar')     
           } else {

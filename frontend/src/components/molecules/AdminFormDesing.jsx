@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { api } from "../../utils/api";
 import CustomInput from "../atoms/CustomInput"
 import CustomButton from "../atoms/CustomButton";
 import { toast } from 'react-toastify'
@@ -14,9 +13,8 @@ export default function AdminFormDesing() {
         const desingPayload = {
             image: img,
         }
-        console.log("desing", desingPayload);
-        const desingData = await api.createDesing({data: desingPayload});
-        console.log("desing", desingData);
+        // TODO: integrar com o backend (NestJS) — cadastro de tecnologia de design.
+        const desingData = null;
         if(!desingData){
             toast.error('Erro ao cadastrar')     
           } else {

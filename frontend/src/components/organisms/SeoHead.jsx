@@ -2,10 +2,7 @@ import Head from "next/head";
 
 
 
-const SeoHead = ({metaData}) => {
- 
-// console.log('eee', metaData)
-
+const SeoHead = () => {
   return (
     <Head>
       <title>Tiago Dev</title>
@@ -58,9 +55,3 @@ const SeoHead = ({metaData}) => {
   );
 };
 export default SeoHead;
-
-// export const getServerSideProps = async () => {
-//   const res = await api.getMeta(); 
-//   const metaData = await res.json()
-//   return metaData;
-// }
