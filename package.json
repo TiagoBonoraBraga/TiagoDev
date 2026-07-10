@@ -1,0 +1,14 @@
+{
+  "name": "tiagodev-monorepo",
+  "private": true,
+  "packageManager": "pnpm@10.33.2",
+  "scripts": {
+    "dev": "turbo run dev --parallel --ui tui",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "start": "turbo run start"
+  },
+  "devDependencies": {
+    "turbo": "2.9.18"
+  }
+}

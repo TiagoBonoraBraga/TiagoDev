@@ -8,7 +8,12 @@ const groups = [
     label: 'Back-end',
     items: [
       ...imagensBackend,
-      { Icon: SiNestjs, color: '#e0234e', name: 'NestJS' },
+      {
+        Icon: SiNestjs,
+        color: '#e0234e',
+        name: 'NestJS',
+        url: 'https://docs.nestjs.com',
+      },
     ],
   },
   { label: 'Ferramentas', items: imagesDesing },
@@ -35,11 +40,17 @@ export default function TechStack() {
               <div className="flex flex-wrap gap-3">
                 {group.items.map((tech, i) => {
                   const Icon = tech.Icon
+                  const Tag = tech.url ? 'a' : 'div'
                   return (
-                    <div
+                    <Tag
                       key={i}
-                      title={tech.name || undefined}
-                      className="flex h-14 w-14 items-center justify-center rounded-xl border border-line bg-paper shadow-sm grayscale transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-md hover:grayscale-0"
+                      {...(tech.url && {
+                        href: tech.url,
+                        target: '_blank',
+                        rel: 'noreferrer',
+                        'aria-label': `Documentação de ${tech.name}`,
+                      })}
+                      className="group relative flex h-14 w-14 cursor-pointer items-center justify-center rounded-xl border border-line bg-paper shadow-sm grayscale transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-md hover:grayscale-0"
                     >
                       {Icon ? (
                         <Icon
@@ -49,13 +60,18 @@ export default function TechStack() {
                       ) : (
                         <Image
                           src={tech.img}
-                          alt=""
+                          alt={tech.name || ''}
                           width={40}
                           height={40}
                           className="h-7 w-auto"
                         />
                       )}
-                    </div>
+                      {tech.name && (
+                        <span className="pointer-events-none absolute -top-9 left-1/2 z-10 -translate-x-1/2 translate-y-1 whitespace-nowrap rounded-md bg-ink px-2 py-1 font-mono text-[11px] text-paper opacity-0 shadow-md transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                          {tech.name}
+                        </span>
+                      )}
+                    </Tag>
                   )
                 })}
               </div>

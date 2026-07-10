@@ -36,30 +36,48 @@ import Backend from "../../public/images/backend.png";
 export const imagens = [
   {
     img: Html,
+    name: "HTML",
+    url: "https://developer.mozilla.org/docs/Web/HTML",
   },
   {
     img: JavaScript,
+    name: "JavaScript",
+    url: "https://developer.mozilla.org/docs/Web/JavaScript",
   },
   {
     img: Css,
+    name: "CSS",
+    url: "https://developer.mozilla.org/docs/Web/CSS",
   },
   {
     img: Next,
+    name: "Next.js",
+    url: "https://nextjs.org/docs",
   },
   {
-    img: React,    
+    img: React,
+    name: "React",
+    url: "https://react.dev",
   },
   {
-    img: Typescript,    
+    img: Typescript,
+    name: "TypeScript",
+    url: "https://www.typescriptlang.org/docs",
   },
   {
-    img: Sass,    
+    img: Sass,
+    name: "Sass",
+    url: "https://sass-lang.com/documentation",
   },
   {
-    img: StyledComponent,    
+    img: StyledComponent,
+    name: "Styled Components",
+    url: "https://styled-components.com/docs",
   },
   {
-    img: Tailwind,   
+    img: Tailwind,
+    name: "Tailwind CSS",
+    url: "https://tailwindcss.com/docs",
   },
 ];
 
@@ -67,21 +85,33 @@ export const imagens = [
 export const imagensBackend = [
   {
     img: Prisma,
+    name: "Prisma",
+    url: "https://www.prisma.io/docs",
   },
   {
     img: Postgre,
+    name: "PostgreSQL",
+    url: "https://www.postgresql.org/docs/",
   },
   {
     img: Php,
+    name: "PHP",
+    url: "https://www.php.net/docs.php",
   },
   {
     img: node,
+    name: "Node.js",
+    url: "https://nodejs.org/en/docs",
   },
   {
     img: Mongo,
+    name: "MongoDB",
+    url: "https://www.mongodb.com/docs/",
   },
   {
     img: Express,
+    name: "Express",
+    url: "https://expressjs.com/",
   },
 ];
 
@@ -89,12 +119,18 @@ export const imagensBackend = [
 export const imagesDesing = [
   {
     img: Figma,
+    name: "Figma",
+    url: "https://help.figma.com/",
   },
   {
     img: Miro,
+    name: "Miro",
+    url: "https://help.miro.com/",
   },
   {
     img: Trello,
+    name: "Trello",
+    url: "https://support.atlassian.com/trello/",
   },
 ];
 
