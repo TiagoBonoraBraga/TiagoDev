@@ -30,6 +30,8 @@ import JunkieDust from "../../public/images/junkiedust.png";
 import Fpinfo from "../../public/images/fpinfo.png";
 import Ogait from "../../public/images/ogait.png";
 import Backend from "../../public/images/backend.png";
+import Site from "../../public/images/site.jpg"
+
 
 
 
@@ -184,11 +186,11 @@ export const reactProjects: Project[] = [
 
 export const nextProjects: Project[] = [
   {
-    image: JunkieDust,
-    title: "Junkie Dust",
-    description: "Projeto Junkie Dust, É com grande entusiasmo que apresento o Junkie Dust Player, uma plataforma online dedicada a bandas e músicos, permitindo que eles compartilhem suas composições, fotos e letras de músicas de forma interativa e envolvente.  Utilizamos o Next.js, um framework React com funcionalidades avançadas, juntamente com Typescript, como geração estática e pré-renderização, para criar uma aplicação robusta e otimizada. Para estilização, adotamos o Tailwind CSS, uma biblioteca de utilitários CSS altamente customizável. Em resumo, o Junkie Dust Player é mais do que uma simples plataforma de música. É um espaço dedicado à expressão artística, onde bandas e músicos podem conectar-se com os fãs e compartilhar sua paixão pela música de forma autêntica e significativa. ",
-    repository: "https://github.com/TiagoBonoraBraga/junkiedust",
-    deploy: "www.junkiedust.com",
+    image: Site,
+    title: "FaCiencia",
+    description: "Projeto FaCiencia, site institucional da Faculdade FaCiencia, instituição de ensino superior de Curitiba/PR fundada em 2010, com cursos EAD reconhecidos pelo MEC e nota 4 na avaliação institucional. A plataforma reúne em um só lugar tudo o que o aluno precisa: inscrição no Vestibular 2026, cursos de Graduação, Pós-Graduação e Extensão, Portal do Aluno, AVA, Biblioteca Virtual, Validador de Documentos e Documentos Institucionais. O site também conta com galeria, depoimentos de alunos e as seções FaCiencia Cast e Eventos e Palestras, que exibem automaticamente os vídeos mais recentes publicados no YouTube. Utilizamos o Next.js, um framework React com funcionalidades avançadas como pré-renderização e otimização de imagens, com as mídias servidas pelo Google Cloud Storage, além de uma estrutura completa de SEO e recursos de acessibilidade. Em resumo, o site da FaCiencia é mais do que uma página institucional. É a porta de entrada digital da faculdade, conectando futuros alunos, estudantes e a comunidade acadêmica a uma educação de qualidade e acessível.",
+    repository: "",
+    deploy: "https://faciencia.edu.br",
   },
   {
     image: Fpinfo,

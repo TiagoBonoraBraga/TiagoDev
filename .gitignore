@@ -7,3 +7,6 @@ node_modules
 # misc
 .DS_Store
 *.log
+
+# vídeos são grandes demais para o GitHub (limite de 100 MB)
+*.mp4
