@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
-import nookies from 'nookies';
+import Cookies from 'js-cookie';
 import CustomLogo from "../atoms/CustomLogo";
 
 export default function AdminHeader() {
@@ -71,7 +71,7 @@ export default function AdminHeader() {
                     <button
                         className="px-4 py-2 text-blue-300 bg-white-500 rounded-md shadow hover:bg-blue-500 hover:text-white-500"
                         onClick={() => {
-                            nookies.destroy(null, 'SECRET_PASSWORD');
+                            Cookies.remove('SECRET_PASSWORD', { path: '/' });
                             router.push('/')
                         }}
                     >

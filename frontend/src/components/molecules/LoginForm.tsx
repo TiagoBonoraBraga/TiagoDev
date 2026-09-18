@@ -2,7 +2,7 @@ import CustomLabel from "@/components/atoms/CustomLabel";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { toast } from 'react-toastify'
-import nookies from 'nookies';
+import Cookies from 'js-cookie';
 
 export default function LoginForm() {
 
@@ -19,8 +19,8 @@ export default function LoginForm() {
                         onSubmit={(e) => {
                             e.preventDefault();
                             if (password) {
-                                nookies.set(null, 'SECRET_PASSWORD', password, {
-                                    maxAge: 30 * 24 * 60 * 60,
+                                Cookies.set('SECRET_PASSWORD', password, {
+                                    expires: 30,
                                     path: '/'
                                 });
                                 router.push('/admin/register')

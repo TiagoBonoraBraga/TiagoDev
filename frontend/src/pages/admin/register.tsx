@@ -1,4 +1,3 @@
-import nookies from 'nookies';
 import AdminCardTecno from "@/components/organisms/AdminCardTecno";
 import AdminCardProjects from "@/components/organisms/AdminCardProjects";
 import LayoutAdm from '@/components/templates/LayoutAdm';
