@@ -1,14 +1,15 @@
-import { useState, type ChangeEvent, type FormEvent } from 'react'
 import {
   FiMail,
   FiPhone,
   FiMapPin,
   FiGithub,
   FiLinkedin,
-  FiSend,
-  FiCheckCircle,
-  FiAlertCircle,
+  FiArrowUpRight,
 } from 'react-icons/fi'
+import { FaWhatsapp } from 'react-icons/fa'
+
+const WHATSAPP_URL =
+  'https://api.whatsapp.com/send?phone=5541988082384&text=Ol%C3%A1%2C%20vim%20pelo%20seu%20portf%C3%B3lio!'
 
 const channels = [
   {
@@ -21,7 +22,7 @@ const channels = [
     Icon: FiPhone,
     label: 'WhatsApp',
     value: '+55 (41) 98808-2384',
-    href: 'https://api.whatsapp.com/send?phone=5541988082384&text=Ol%C3%A1%2C%20vim%20pelo%20seu%20portf%C3%B3lio!',
+    href: WHATSAPP_URL,
   },
   {
     Icon: FiMapPin,
@@ -36,116 +37,7 @@ const socials = [
   { Icon: FiLinkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/tiagocode/' },
 ]
 
-type FormValues = { name: string; email: string; phone: string; message: string }
-type FormErrors = Partial<Record<keyof FormValues, string>>
-type FormStatus = 'idle' | 'sending' | 'success' | 'error'
-
-const initialValues: FormValues = { name: '', email: '', phone: '', message: '' }
-
-function validate(v: FormValues) {
-  const errors: FormErrors = {}
-  if (v.name.trim().length < 2) errors.name = 'Informe seu nome.'
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.email.trim()))
-    errors.email = 'Digite um e-mail válido.'
-  if (v.phone.trim().length < 8) errors.phone = 'Digite um telefone válido.'
-  if (v.message.trim().length < 5)
-    errors.message = 'Conte um pouco mais (mín. 5 caracteres).'
-  return errors
-}
-
-interface FieldProps {
-  id: string
-  label: string
-  type?: string
-  value: string
-  onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void
-  error?: string
-  placeholder?: string
-  multiline?: boolean
-  rows?: number
-}
-
-function Field({ id, label, type = 'text', value, onChange, error, placeholder, multiline, rows }: FieldProps) {
-  const base = `w-full rounded-xl border bg-paper-soft px-4 py-3 text-sm text-ink placeholder:text-muted/60 transition-colors focus:outline-none focus:ring-2 ${
-    error
-      ? 'border-red-400 focus:border-red-400 focus:ring-red-400/20'
-      : 'border-line focus:border-accent focus:ring-accent/20'
-  }`
-
-  return (
-    <div>
-      <label
-        htmlFor={id}
-        className="mb-1.5 block font-mono text-xs uppercase tracking-wider text-muted"
-      >
-        {label}
-      </label>
-      {multiline ? (
-        <textarea
-          id={id}
-          name={id}
-          rows={rows}
-          value={value}
-          onChange={onChange}
-          placeholder={placeholder}
-          aria-invalid={!!error}
-          className={`${base} resize-none`}
-        />
-      ) : (
-        <input
-          id={id}
-          name={id}
-          type={type}
-          value={value}
-          onChange={onChange}
-          placeholder={placeholder}
-          aria-invalid={!!error}
-          className={base}
-        />
-      )}
-      {error && (
-        <p className="mt-1.5 flex items-center gap-1 text-xs text-red-500">
-          <FiAlertCircle size={13} /> {error}
-        </p>
-      )}
-    </div>
-  )
-}
-
 export default function ContactForm() {
-  const [values, setValues] = useState<FormValues>(initialValues)
-  const [errors, setErrors] = useState<FormErrors>({})
-  const [status, setStatus] = useState<FormStatus>('idle')
-
-  function handleChange(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
-    const name = e.target.name as keyof FormValues
-    const { value } = e.target
-    setValues((prev) => ({ ...prev, [name]: value }))
-    if (errors[name]) setErrors((prev) => ({ ...prev, [name]: undefined }))
-    if (status !== 'idle' && status !== 'sending') setStatus('idle')
-  }
-
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-
-    const nextErrors = validate(values)
-    setErrors(nextErrors)
-    if (Object.keys(nextErrors).length > 0) return
-
-    setStatus('sending')
-
-    // TODO: integrar com o backend (NestJS) — envio do formulário de contato.
-    // Enquanto o backend não existir, o envio fica inativo.
-    const response = null
-
-    if (response) {
-      setStatus('success')
-      setValues(initialValues)
-    } else {
-      setStatus('error')
-    }
-  }
-
   return (
     <section className="mx-auto max-w-6xl px-6 pb-20 md:pb-28">
       <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
@@ -225,101 +117,32 @@ export default function ContactForm() {
           </div>
         </div>
 
-        {/* Formulário */}
-        <form
-          onSubmit={handleSubmit}
-          noValidate
-          className="rounded-2xl border border-line bg-paper p-6 shadow-sm md:p-8"
-        >
-          <h2 className="font-display text-xl font-bold tracking-tight text-ink">
-            Envie uma mensagem
+        {/* CTA de WhatsApp (no lugar do antigo formulário) */}
+        <div className="flex flex-col justify-center rounded-2xl border border-line bg-paper p-6 shadow-sm md:p-10">
+          <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent">
+            <FaWhatsapp size={24} />
+          </span>
+          <h2 className="mt-5 font-display text-2xl font-bold tracking-tight text-ink">
+            Fale conosco
           </h2>
-          <p className="mt-1.5 text-sm text-muted">
-            Preencha o formulário e eu retorno o quanto antes.
+          <p className="mt-2 max-w-md text-sm leading-relaxed text-muted md:text-base">
+            Me chame no WhatsApp e conte um pouco sobre seu projeto, ideia ou
+            oportunidade — respondo o quanto antes.
           </p>
-
-          {status === 'success' && (
-            <div className="mt-6 flex items-start gap-3 rounded-xl border border-accent/30 bg-accent/10 p-4 text-sm text-ink">
-              <FiCheckCircle className="mt-0.5 shrink-0 text-accent" size={18} />
-              <p>
-                Mensagem enviada! Obrigado pelo contato — retorno o mais rápido
-                possível.
-              </p>
-            </div>
-          )}
-          {status === 'error' && (
-            <div className="mt-6 flex items-start gap-3 rounded-xl border border-red-400/40 bg-red-500/10 p-4 text-sm text-ink">
-              <FiAlertCircle className="mt-0.5 shrink-0 text-red-500" size={18} />
-              <p>
-                Algo deu errado ao enviar. Tente novamente ou use um dos canais
-                ao lado.
-              </p>
-            </div>
-          )}
-
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            <Field
-              id="name"
-              label="Nome"
-              value={values.name}
-              onChange={handleChange}
-              error={errors.name}
-              placeholder="Seu nome"
-            />
-            <Field
-              id="email"
-              label="E-mail"
-              type="email"
-              value={values.email}
-              onChange={handleChange}
-              error={errors.email}
-              placeholder="voce@email.com"
-            />
-          </div>
-
-          <div className="mt-4">
-            <Field
-              id="phone"
-              label="Telefone"
-              type="tel"
-              value={values.phone}
-              onChange={handleChange}
-              error={errors.phone}
-              placeholder="(41) 90000-0000"
-            />
-          </div>
-
-          <div className="mt-4">
-            <Field
-              id="message"
-              label="Mensagem"
-              value={values.message}
-              onChange={handleChange}
-              error={errors.message}
-              placeholder="Conte um pouco sobre o que você precisa…"
-              multiline
-              rows={5}
-            />
-          </div>
-
-          <button
-            type="submit"
-            disabled={status === 'sending'}
-            className="group mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-accent disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="group mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-ink px-8 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-accent sm:w-fit"
           >
-            {status === 'sending' ? (
-              'Enviando…'
-            ) : (
-              <>
-                Enviar mensagem
-                <FiSend
-                  size={16}
-                  className="transition-transform group-hover:translate-x-0.5"
-                />
-              </>
-            )}
-          </button>
-        </form>
+            <FaWhatsapp size={18} />
+            Fale conosco
+            <FiArrowUpRight
+              size={16}
+              className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            />
+          </a>
+        </div>
       </div>
     </section>
   )
