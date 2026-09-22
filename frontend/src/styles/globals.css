@@ -85,6 +85,40 @@
   }
 }
 
+/* Carrossel reutilizável (atoms/Marquee), estilo letreiro clássico: cada
+   item aparece uma única vez. O padding-left de 100% posiciona a fileira
+   logo após a borda direita; ela atravessa a tela, sai pela esquerda e,
+   quando o trilho inteiro (padding + itens) chega em -100%, o loop
+   reinicia com o primeiro item de volta na borda direita — sem duplicar.
+   As variáveis (duração, atraso de fase e sentido) vêm por props do
+   componente. CSS puro, fora dos layers do Tailwind. */
+.marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 0.75rem;
+  width: max-content;
+  padding-left: 100%;
+  animation: marquee var(--marquee-duration, 30s) linear infinite;
+  animation-delay: var(--marquee-delay, 0s);
+  animation-direction: var(--marquee-direction, normal);
+}
+
+@media (hover: hover) {
+  .marquee:hover .marquee-track {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
 /* Acessibilidade: respeita quem prefere menos movimento */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -94,5 +128,13 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  /* Exceção: congelado, o carrossel fica no quadro inicial com as logos
+     duplicadas paradas, parecendo quebrado. Movimento é lento, linear e
+     pausável no hover, então mantém rodando mesmo com menos movimento. */
+  .marquee-track {
+    animation-duration: var(--marquee-duration, 40s) !important;
+    animation-iteration-count: infinite !important;
   }
 }

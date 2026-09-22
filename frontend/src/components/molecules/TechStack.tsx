@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { SiNestjs } from 'react-icons/si'
 import { imagens, imagensBackend, imagesDesing } from '../../utils/mocks'
+import Marquee from '../atoms/Marquee'
 import type { TechItem } from '@/types'
 
 interface TechGroup {
@@ -70,6 +71,12 @@ function TechCard({ tech }: { tech: TechItem }) {
   return <div className={cardClassName}>{inner}</div>
 }
 
+// Percurso ≈ janela do carrossel (max-w-md ~450px) + largura da fileira
+// (~68px/card); o extra por índice varia levemente a velocidade entre as linhas
+function rowDuration(count: number, index: number) {
+  return Math.round((450 + count * 68) / 40) + index * 3
+}
+
 export default function TechStack() {
   return (
     <section className="border-y border-line bg-paper-soft">
@@ -80,7 +87,7 @@ export default function TechStack() {
         </h2>
 
         <div className="mt-10 flex flex-col gap-10">
-          {groups.map((group) => (
+          {groups.map((group, index) => (
             <div
               key={group.label}
               className="grid gap-4 md:grid-cols-[200px_1fr] md:items-start"
@@ -88,11 +95,15 @@ export default function TechStack() {
               <h3 className="font-mono text-sm uppercase tracking-widest text-muted md:pt-3">
                 {group.label}
               </h3>
-              <div className="flex flex-wrap gap-3">
+              <Marquee
+                duration={rowDuration(group.items.length, index)}
+                offset={0.15 + index * 0.28}
+                className="-mt-12 max-w-md pt-12"
+              >
                 {group.items.map((tech, i) => (
                   <TechCard key={i} tech={tech} />
                 ))}
-              </div>
+              </Marquee>
             </div>
           ))}
         </div>
