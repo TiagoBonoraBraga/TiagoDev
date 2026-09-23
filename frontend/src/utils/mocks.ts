@@ -1,4 +1,4 @@
-import type { ContactMessage, Project, TechItem } from "@/types";
+import type { Project, TechItem } from "@/types";
 
 import Html from "../../public/images/html.png";
 import JavaScript from "../../public/images/javascript.png";
@@ -18,19 +18,18 @@ import Express from "../../public/images/express.png";
 import Figma from "../../public/images/figma.png";
 import Miro from "../../public/images/miro.png";
 import Trello from "../../public/images/trello.png";
-import FoodBox from "../../public/images/foodbox.jpg";
 import BoxFood from "../../public/images/boxfood.png";
-import PecoTheCat from "../../public/images/pecoTheCat.jpg";
 import Familia from "../../public/images/familia.png";
-import Protech from "../../public/images/protech.png";
-import Bola from "../../public/images/bola.png";
 import Elgeladon from "../../public/images/elGeladon.png";
-import OldGames from "../../public/images/oldgames.png";
-import JunkieDust from "../../public/images/junkiedust.png";
-import Fpinfo from "../../public/images/fpinfo.png";
-import Ogait from "../../public/images/ogait.png";
 import Backend from "../../public/images/backend.png";
-import Site from "../../public/images/site.jpg"
+import Site from "../../public/images/site.jpg";
+import ExtFaciencia from "../../public/images/extFaciencia.jpg";
+import Biotta from "../../public/images/biotta.jpg";
+import BiottaBlog from "../../public/images/biottaBlog.jpg";
+import Ananias from "../../public/images/ananias.jpg";
+import Cbc from "../../public/images/cbc.jpg";
+import Lavick from "../../public/images/lavick.jpg";
+import GetulioWorks from "../../public/images/getulioWorks.jpg";
 
 
 
@@ -138,12 +137,81 @@ export const imagesDesing: TechItem[] = [
   },
 ];
 
-//mocks projects
+// Projetos (lista única, sem divisão por tecnologia).
+// Os três primeiros são os destaques exibidos na home (FeaturedProjects).
 
-export const javascriptProjects: Project[] = [
+export const projects: Project[] = [
+  {
+    image: Site,
+    title: "FaCiencia",
+    tag: "Next.js · Tailwind",
+    description: "Projeto FaCiencia, site institucional da Faculdade FaCiencia, instituição de ensino superior de Curitiba/PR fundada em 2010, com cursos EAD reconhecidos pelo MEC e nota 4 na avaliação institucional. A plataforma reúne em um só lugar tudo o que o aluno precisa: inscrição no Vestibular 2026, cursos de Graduação, Pós-Graduação e Extensão, Portal do Aluno, AVA, Biblioteca Virtual, Validador de Documentos e Documentos Institucionais. O site também conta com galeria, depoimentos de alunos e as seções FaCiencia Cast e Eventos e Palestras, que exibem automaticamente os vídeos mais recentes publicados no YouTube. Utilizamos o Next.js, um framework React com funcionalidades avançadas como pré-renderização e otimização de imagens, com as mídias servidas pelo Google Cloud Storage, além de uma estrutura completa de SEO e recursos de acessibilidade. Em resumo, o site da FaCiencia é mais do que uma página institucional. É a porta de entrada digital da faculdade, conectando futuros alunos, estudantes e a comunidade acadêmica a uma educação de qualidade e acessível.",
+    repository: "",
+    deploy: "https://faciencia.edu.br",
+  },
+  {
+    image: Biotta,
+    title: "Cachaça Biotta",
+    tag: "Site bilíngue PT/EN",
+    description: "Site oficial da Cachaça Biotta, destilado artesanal produzido na terra roxa paranaense. A página apresenta a marca e a Biotta Prata com seções de degustação passo a passo, carrossel interativo de drinks, manifesto sobre tradição e produção artesanal e formulário de contato, além de verificação de maioridade (18+), link direto de compra e versão bilíngue em português e inglês com seletor de idioma.",
+    deploy: "https://cachacabiotta.com.br/pt/",
+  },
+  {
+    image: ExtFaciencia,
+    title: "FaCiencia Extensão",
+    tag: "Portal educacional",
+    description: "Portal de Cursos de Extensão da Faculdade FaCiencia. Plataforma dedicada à divulgação dos cursos de extensão e formação continuada da instituição, reunindo o catálogo completo de cursos com informações e inscrição em um só lugar. Voltado a profissionais e à comunidade acadêmica que buscam formação complementar com a qualidade FaCiencia.",
+    deploy: "https://extensao.faciencia.edu.br",
+  },
+  {
+    image: Cbc,
+    title: "CBC",
+    tag: "Site corporativo",
+    description: "Site institucional da CBC — Companhia Brasileira de Cartuchos, uma das maiores fabricantes de munições do mundo. Portal corporativo com catálogo completo de produtos, seções institucionais de história, esporte e governança, área de suporte com downloads, FAQ, legislação e assistência técnica, busca de revendedores, notícias e podcasts no CBC News, além de verificação de maioridade e canais de ouvidoria e LGPD.",
+    deploy: "https://www.cbc.com.br",
+  },
+  
+  {
+    image: BiottaBlog,
+    title: "Biotta Blog",
+    tag: "Blog",
+    description: "Blog da Cachaça Biotta, portal de conteúdo dedicado à cultura da cachaça artesanal brasileira. Os artigos são organizados nas categorias História, Curiosidades, Dicas e Diferenças entre tipos de cachaça, com navegação por postagens e integração com as redes sociais da marca — aproximando a Biotta dos apreciadores da bebida e fortalecendo sua presença digital.",
+    deploy: "https://cachacabiotta.com.br/blog/",
+  },
+  {
+    image: Ananias,
+    title: "Auto Elétrica Ananias",
+    tag: "Landing page",
+    description: "Site da Auto Elétrica Ananias, oficina especializada em diagnóstico e reparo de sistemas elétricos automotivos em Curitiba/PR. Apresenta as especialidades da oficina — diagnóstico eletrônico, bateria e sistema de carga, motor de partida, alternador, fiação e iluminação —, galeria de trabalhos realizados, sintomas comuns de falhas, perguntas frequentes e localização com mapa, com botões de WhatsApp em pontos estratégicos para orçamento e agendamento direto.",
+    deploy: "https://ananiasautoeletrica.cia.tv",
+  },
+  {
+    image: Lavick,
+    title: "Lavick Marcenaria",
+    tag: "Site institucional",
+    description: "Site da Lavick Marcenaria, empresa de Curitiba/PR especializada em móveis planejados e sob medida desde 1989. Apresenta o portfólio de ambientes residenciais e comerciais — dormitórios, cozinhas, closets, lavanderias, home theater e escritórios —, além de persianas, cortinas, pisos laminados e vinílicos e papel de parede, com galeria de projetos realizados, blog, formulário de solicitação de projeto e WhatsApp integrado para orçamentos.",
+    deploy: "https://lavickmarcenaria.cia.tv",
+  },
+  {
+    image: GetulioWorks,
+    title: "Getulio Works",
+    tag: "Landing page",
+    description: "Site do Getulio Works, espaço de coworking e aluguel de salas em Curitiba/PR. Divulga as modalidades de salas privadas, coletivas e de reuniões e treinamentos, com destaque para a infraestrutura moderna, WiFi veloz e a comunidade profissional do espaço, além de eventos corporativos e happy hours de networking. Conta com formulário de inscrição com desconto para novos membros e contato direto via WhatsApp.",
+    deploy: "https://www.getulioworks.cia.tv",
+  },  
+  {
+    image: Familia,
+    title: "Familia Chimiloski",
+    tag: "WordPress",
+    description: "O Projeto Panificadora e Confeitaria Família Chimiloski é um exemplo vibrante de como a tecnologia pode aprimorar os negócios familiares tradicionais. Desenvolvido com o CMS Wordpress, esse projeto emprega a versatilidade do PHP e o poder do plugin WooCommerce para criar um cardápio virtual abrangente e envolvente. Através dessa plataforma, a Panificadora e Confeitaria Família Chimiloski oferece uma experiência de compra online conveniente e personalizada, garantindo que seus produtos deliciosos e artesanais estejam ao alcance dos clientes com apenas alguns cliques.",
+    repository: "https://github.com/TiagoBonoraBraga/modulo2proj1",
+    deploy: "www.familiachimiloski.com.br",
+    link: "https://familiachimiloski.com.br",
+  },
   {
     image: BoxFood,
     title: "FoodBox",
+    tag: "JavaScript Vanilla",
     description:
       "Projeto Cardápio Digital - Projeto desenvolvido através da aulas do Mestre Gustavo Guanabara do canal Curso em Video no youtube - O FoodBox foi desenvolvido totalmente na linguagem Javascript Vanilla, visando aprimorar meus conhecimentos na linguagem pura. Na estilização do projeto foi utilizado css 3 e também foi feita a integração dos pedidos através de mensagens via whatsapp.",
     repository: "https://github.com/TiagoBonoraBraga/foodbox",
@@ -151,111 +219,13 @@ export const javascriptProjects: Project[] = [
     link: "https://tiagobonorabraga.github.io/foodbox/"
   },
   {
-    image: PecoTheCat,
-    title: "Jogo do Humor",
-    description: "Projeto Jogo do Humor - Projeto desenvolvido no módulo 2 do curso de  Desenvolvimento Fullstack da Blue Ed.Tech.  O Jogo do Humor foi desenvolvido totalmente na linguagem Javascript Vanilla, visando aprimorar meus conhecimentos na linguagem pura. Na estilização do projeto foi utilizado css 3. O jogo consiste em fazer a manipulação do DOM trocando a imagem e o humor do Peco The Cat através da ação do botão.",
-    repository: "https://github.com/TiagoBonoraBraga/modulo2proj1",
-    deploy: "www.jogodohumor.cia.tv",
-    link: "https://tiagobonorabraga.github.io/modulo2proj1/"
-  },
-];
-
-export const reactProjects: Project[] = [
-  {
-    image: Elgeladon ,
-    title: "El-Geladon",
-    description: "Projeto El-Geladon - Cardápio de Paletas Mexicanas, Este projeto foi desenvolvido com o objetivo de proporcionar uma experiência moderna e interativa aos clientes da paleteria El-Geladon, ao mesmo tempo em que facilita a gestão e atualização do cardápio para a equipe. Utilizamos o React.js como framework principal para desenvolver a interface do usuário. O React.js é ideal para criar componentes reutilizáveis e uma experiência responsiva e para sua estilização, empregamos o Styled-Components. Essa biblioteca permite criar estilos de forma modular e dinâmica, integrando-os diretamente com os componentes React. ",
-    repository: "https://github.com/TiagoBonoraBraga/Front-ElgeladonReact",
-    deploy: "www.jogodohumor.cia.tv",
-  },
-  // {
-  //   image: FoodBox,
-  //   title: "Pizza fresh",
-  //   description: "Projeto Pizza Fresh,  Είπε, κι εμάς μάς έκοψε μεμιάς τα ήπατά μας το μουγκρητό του το βαρύ    κι η όψη η γιγαντένια. Όμως του απολογήθηκα κι αυτά τα λόγια του είπα· Από την Τροία ερχόμαστε, Αχαιοί που μύριοι ανέμοι μάς πέταξαν στης θάλασσας τα τρίσβαθα τα πλάτια. Πατρίδα θέλαμε, κι αλλού μάς φέραν άλλοι δρόμοι· τέτοιο του Δία στάθηκε το θέλημα κι η γνώμη. Και λέμε απ' του Αγαμέμνονα του γιού του Ατρέα τ' ασκέρι πως είμαστε",
-  //   repository: "https://github.com/TiagoBonoraBraga/modulo2proj1",
-  //   deploy: "www.jogodohumor.cia.tv",
-  // },
-  {
-    image: OldGames,
-    title: "Old-Games",
-    description: "Projeto Old-Games - É com entusiasmo que apresento o projeto Old Games, um catálogo online dedicado a jogos antigos, desenvolvido com tecnologias modernas para oferecer uma experiência dinâmica e informativa aos entusiastas de jogos retrô. Utilizamos o React.js juntamente com TypeScript para criar uma base sólida e tipada para o desenvolvimento do frontend. O TypeScript adiciona um nível extra de robustez ao código, ajudando a evitar erros comuns e a facilitar o trabalho em equipe. Para estilização, optamos pelo Styled-Components. Essa biblioteca permite criar estilos de forma componentizada e dinâmica, integrando-os diretamente com os componentes React. Isso promove uma manutenção mais fácil e evita problemas de escopo de estilos.",
-    repository: "https://github.com/TiagoBonoraBraga/oldgamesfrontend",
-    deploy: "www.jogodohumor.cia.tv",
-  },
-];
-
-export const nextProjects: Project[] = [
-  {
-    image: Site,
-    title: "FaCiencia",
-    description: "Projeto FaCiencia, site institucional da Faculdade FaCiencia, instituição de ensino superior de Curitiba/PR fundada em 2010, com cursos EAD reconhecidos pelo MEC e nota 4 na avaliação institucional. A plataforma reúne em um só lugar tudo o que o aluno precisa: inscrição no Vestibular 2026, cursos de Graduação, Pós-Graduação e Extensão, Portal do Aluno, AVA, Biblioteca Virtual, Validador de Documentos e Documentos Institucionais. O site também conta com galeria, depoimentos de alunos e as seções FaCiencia Cast e Eventos e Palestras, que exibem automaticamente os vídeos mais recentes publicados no YouTube. Utilizamos o Next.js, um framework React com funcionalidades avançadas como pré-renderização e otimização de imagens, com as mídias servidas pelo Google Cloud Storage, além de uma estrutura completa de SEO e recursos de acessibilidade. Em resumo, o site da FaCiencia é mais do que uma página institucional. É a porta de entrada digital da faculdade, conectando futuros alunos, estudantes e a comunidade acadêmica a uma educação de qualidade e acessível.",
-    repository: "",
-    deploy: "https://faciencia.edu.br",
-  },
-  {
-    image: Fpinfo,
-    title: "Fpinfo",
-    description: "Projeto Fpinfo, Estou empolgado em apresentar o projeto Fpinfo, uma empresa especializada em construção de sites modernos e soluções tecnológicas, desenvolvido com tecnologias avançadas para oferecer produtos de alta qualidade aos nossos clientes. Em resumo, a Fpinfo é uma empresa comprometida em oferecer soluções tecnológicas inovadoras e personalizadas para construção de sites e aplicações web. Com o uso de tecnologias como Next.js, TypeScript e Tailwind CSS, buscamos superar as expectativas de nossos clientes e impulsionar seus negócios para o próximo nível. O Next.js é um framework React com funcionalidades avançadas, como pré-renderização, geração estática e suporte a TypeScript. Para estilização, utilizamos o Tailwind CSS, uma biblioteca de utilitários CSS altamente customizável. ",
-    repository: "",
-    deploy: "www.fpinfo.com",
-  },
-  {
-    image: Ogait,
-    title: "Ogait Ashtar",
-    description: "Projeto Tiago Dev, Estou animado em apresentar o projeto Ogait Ashtar, um portfólio multifacetado que destaca as habilidades musicais do guitarrista Ogait Ashtar, bem como seus interesses esportivos em patins inline e trilhas pela natureza. Em resumo, o projeto Ogait Ashtar é mais do que um simples portfólio - é uma narrativa visual e interativa que celebra a versatilidade e paixões de Ogait Ashtar, desde sua música até suas aventuras esportivas. Estamos entusiasmados em compartilhar esta iniciativa e ansiosos para ver como ela inspirará outros e fortalecerá a comunidade criativa e esportiva. Utilizamos o Next.js, um framework React com funcionalidades avançadas de renderização, para criar uma aplicação web eficiente e otimizada. Para estilização, adotamos o Tailwind CSS, uma biblioteca de utilitários CSS que permite criar designs modernos de forma rápida e customizável.",
-    repository: "https://github.com/TiagoBonoraBraga/ogaitashtar",
-    deploy: "www.ogaitashtar.cia.tv",
-  },
-];
-
-export const backendProjects: Project[] = [
-  {
     image: Backend,
     title: "Backend - El-Geladon",
+    tag: "Node · API",
     description: "Projeto Backend - El-Geladon - Projeto backend que implementa operações CRUD (Create, Read, Update, Delete) utilizando Node.js, Express e MongoDB. Essas tecnologias são comumente combinadas para criar aplicativos web ou APIs que manipulam dados de forma eficiente e escalável. Um projeto backend com Node.js, Express e MongoDB para implementar operações CRUD oferece uma maneira eficiente e flexível de criar APIs e aplicativos web que manipulam dados em um banco de dados NoSQL como o MongoDB. Essa combinação de tecnologias é amplamente utilizada na indústria para construir sistemas escaláveis e de alto desempenho.",
     repository: "https://github.com/TiagoBonoraBraga/elgeladon",
     deploy: "",
-  }
+  },
+  
 ]
 
-export const wordpressProjects: Project[] = [
-  {
-    image: Familia,
-    title: "Familia Chimiloski",
-    description: "O Projeto Panificadora e Confeitaria Família Chimiloski é um exemplo vibrante de como a tecnologia pode aprimorar os negócios familiares tradicionais. Desenvolvido com o CMS Wordpress, esse projeto emprega a versatilidade do PHP e o poder do plugin WooCommerce para criar um cardápio virtual abrangente e envolvente. Através dessa plataforma, a Panificadora e Confeitaria Família Chimiloski oferece uma experiência de compra online conveniente e personalizada, garantindo que seus produtos deliciosos e artesanais estejam ao alcance dos clientes com apenas alguns cliques.",
-    repository: "https://github.com/TiagoBonoraBraga/modulo2proj1",
-    deploy: "www.familiachimiloski.com.br",
-    link: "https://familiachimiloski.com.br",
-  },
-  {
-    image: Protech,
-    title: "Pro Tech",
-    description: "O projeto do site Pro Tech Portões Automáticos, desenvolvido com o CMS WordPress, exemplifica o compromisso com a excelência e a modernidade no setor de automação residencial. Utilizando a versatilidade e a robustez do WordPress, o site oferece uma plataforma dinâmica e interativa para apresentar os serviços e produtos da Pro Tech. Com uma interface intuitiva e design sofisticado, os clientes podem explorar facilmente as opções de portões automáticos, sistemas de segurança e serviços de instalação oferecidos pela empresa. Com o Pro Tech Portões Automáticos, a automação residencial está ao alcance de todos, graças à tecnologia acessível e eficiente fornecida pelo CMS WordPress",
-    repository: "https://github.com/TiagoBonoraBraga/modulo2proj1",
-    deploy: "www.protechportoesautomaticos.com.br",
-    link: "https://protechportoesautomaticos.com.br",
-  },
-  {
-    image: Bola,
-    title: "Espaço da Bola",
-    description: "Projeto Espaço da Bola - Explore o universo do futebol como nunca antes visto, com o Espaço da Bola, mergulhe em uma jornada emocionante através do esporte mais popular do mundo. Com nosso site desenvolvido utilizando o CMS WordPress, oferecemos uma plataforma interativa e informativa para todos os apaixonados por futebol. Não importa se você é um torcedor fervoroso, um jogador amador ou um entusiasta casual, o Espaço da Bola tem algo para todos. Junte-se a nós e embarque nessa jornada emocionante pelo mundo do futebol!  ",
-    repository: "https://github.com/TiagoBonoraBraga/modulo2proj1",
-    deploy: "www.espacodabola.com.br",
-    link: "https://espacodabola.com.br",
-  },
-]
-
-export const contacts: ContactMessage[] = [
-  {
-    name: "Tiago Braga",
-    email: "ogait.desenvolvedor@gmail.com",
-    phone: "41-988082384",
-    message: "olá, gostaria de fazer um orçamento"
-  },
-  {
-    name: "Tiago Braga",
-    email: "ogait.desenvolvedor@gmail.com",
-    phone: "41-988082384",
-    message: "olá, gostaria de fazer um orçamento"
-  }
-]

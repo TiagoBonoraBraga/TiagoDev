@@ -4,12 +4,11 @@ import type { Project } from '@/types'
 interface ProjectsSectionProps {
   eyebrow: string
   title: string
-  tag?: string
   projects: Project[]
   onSelect: (project: Project) => void
 }
 
-export default function ProjectsSection({ eyebrow, title, tag, projects, onSelect }: ProjectsSectionProps) {
+export default function ProjectsSection({ eyebrow, title, projects, onSelect }: ProjectsSectionProps) {
   if (!projects?.length) return null
 
   return (
@@ -24,7 +23,6 @@ export default function ProjectsSection({ eyebrow, title, tag, projects, onSelec
           <ProjectCard
             key={project.title}
             project={project}
-            tag={tag}
             onSelect={onSelect}
           />
         ))}

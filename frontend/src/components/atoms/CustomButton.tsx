@@ -4,7 +4,10 @@ interface CustomButtonProps {
 
 export default function CustomButton({ title }: CustomButtonProps) {
     return (
-        <button className="w-28 ss:w-64 ss:mb-5 bg-blue-300 text-white-500 p-1.5 rounded hover:bg-blue-200 hover:text-white-500 border-blue-300 " type="submit">
+        <button
+            className="shrink-0 rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-accent"
+            type="submit"
+        >
             {title}
         </button>
     )

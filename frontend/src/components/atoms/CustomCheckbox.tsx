@@ -18,16 +18,28 @@ export default function CustomCheckbox({ options, value, setValue }: CustomCheck
 
     return (
         <>
-            {options.map((option) => (
-                <label key={option} className="text-blue-400 ss:text-xs">
-                    {option}
-                    <input
-                        className="flex justify-center items-center ml-4 border-blue-200"
-                        type="checkbox"
-                        value={option}
-                        checked={value.includes(option)}
-                        onChange={handleChange} />
-                </label>
-            ))}
-        </>)
+            {options.map((option) => {
+                const checked = value.includes(option)
+                return (
+                    <label
+                        key={option}
+                        className={`inline-flex cursor-pointer items-center rounded-full border px-3.5 py-1.5 text-xs font-medium transition ${
+                            checked
+                                ? 'border-accent bg-accent/10 text-accent'
+                                : 'border-line text-muted hover:border-accent/40 hover:text-ink'
+                        }`}
+                    >
+                        <input
+                            className="sr-only"
+                            type="checkbox"
+                            value={option}
+                            checked={checked}
+                            onChange={handleChange}
+                        />
+                        {option}
+                    </label>
+                )
+            })}
+        </>
+    )
 }

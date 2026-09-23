@@ -1,14 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { FiArrowRight, FiArrowUpRight, FiGithub } from 'react-icons/fi'
-import { reactProjects, nextProjects } from '../../utils/mocks'
-import type { Project } from '@/types'
+import { projects } from '../../utils/mocks'
 
-const featured: (Project & { tag: string })[] = [
-  { ...reactProjects[0], tag: 'React · Styled Components' },
-  { ...reactProjects[1], tag: 'React · TypeScript' },
-  { ...nextProjects[0], tag: 'Next.js · Tailwind' },
-]
+// Os destaques são os primeiros projetos da lista unificada
+const featured = projects.slice(0, 3)
 
 export default function FeaturedProjects() {
   return (
@@ -46,9 +42,11 @@ export default function FeaturedProjects() {
               />
             </div>
             <div className="flex flex-1 flex-col p-5">
-              <span className="inline-flex w-fit rounded-full bg-accent/10 px-2.5 py-1 font-mono text-[11px] tracking-wide text-accent">
-                {project.tag}
-              </span>
+              {project.tag && (
+                <span className="inline-flex w-fit rounded-full bg-accent/10 px-2.5 py-1 font-mono text-[11px] tracking-wide text-accent">
+                  {project.tag}
+                </span>
+              )}
               <h3 className="mt-3 font-display text-lg font-semibold text-ink">
                 {project.title}
               </h3>

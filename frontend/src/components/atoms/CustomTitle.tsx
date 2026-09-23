@@ -3,5 +3,5 @@ interface CustomTitleProps {
 }
 
 export default function CustomTitle({ title }: CustomTitleProps) {
-    return <h1 className="text-start text-lg font-bold text-blue-300 dark:text-blue-500 tracking-wider mb-5">{title}</h1>
+    return <h1 className="mb-4 text-start font-display text-lg font-bold tracking-tight text-ink">{title}</h1>
 }

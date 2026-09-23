@@ -1,25 +1,31 @@
-import AdminFormFrontend from "../molecules/AdminFormFrontend"
-import AdminFormBackend from "../molecules/AdminFormBackend"
-import AdminFormDesing from "../molecules/AdminFormDesing"
-import CustomTitle from "../atoms/CustomTitle"
+import AdminFormTech from "../molecules/AdminFormTech"
+
+const groups = ['Front-end', 'Back-end', 'Projeto e design']
 
 export default function AdminCardTecno() {
-    return (<>
-    <section className="flex flex-col gap-1 mb-10 5 ring-1 ring-blue-200 p-5 ss:p-3 ss:mt-5 rounded-sm">
-      <CustomTitle title="ADICIONAR TECNOLOGIAS" />
-        <CustomTitle title="Frontend" />
-     <div className="flex flex-row justify-start items-center w-auto  gap-2  ss:flex ss:flex-col ss:justify-center ss:items-center ">  
-        <AdminFormFrontend /> 
-     </div>
-        <CustomTitle title="Backend" /> 
-     <div className="flex flex-row justify-start items-center w-auto  gap-2  ss:flex ss:flex-col ss:justify-center ss:items-center ">
-        <AdminFormBackend />
-     </div>
-        <CustomTitle title="Projeto e Desing" /> 
-     <div className="flex flex-row justify-start items-center w-auto  gap-2  ss:mb-10 ss:flex ss:flex-col ss:justify-center ss:items-center ">
-        <AdminFormDesing />
-     </div>
-    </section>
+    return (
+        <section className="rounded-2xl border border-line bg-paper p-6 shadow-md md:p-8">
+            <p className="font-mono text-xs tracking-wider text-accent">{'// tecnologias'}</p>
+            <h2 className="mt-2 font-display text-xl font-bold tracking-tight text-ink">
+                Adicionar tecnologias
+            </h2>
+            <p className="mt-2 text-sm leading-relaxed text-muted">
+                Cadastre o nome, a imagem e o link da documentação — é para ele que
+                a tecnologia aponta quando clicada na stack da home.
+            </p>
 
-    </>)
+            <div className="mt-8 flex flex-col gap-7">
+                {groups.map((label) => (
+                    <div key={label}>
+                        <h3 className="font-mono text-xs uppercase tracking-widest text-muted">
+                            {label}
+                        </h3>
+                        <div className="mt-3">
+                            <AdminFormTech group={label} />
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </section>
+    )
 }

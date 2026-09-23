@@ -6,6 +6,8 @@ export interface Project {
   image: StaticImageData | string;
   title: string;
   description: string;
+  /** Rótulo exibido na pill do card/modal (ex.: stack ou tipo do projeto) */
+  tag?: string;
   repository?: string;
   deploy?: string;
   link?: string;
@@ -21,16 +23,3 @@ export interface TechItem {
   color?: string;
 }
 
-// Mensagem de contato "crua" (mock local).
-export interface ContactMessage {
-  name: string;
-  email: string;
-  phone: string;
-  message: string;
-}
-
-// Contato como vem da API (formato attributes + id), usado em CardContact.
-export interface ContactEntry {
-  id?: number | string;
-  attributes: ContactMessage & { createdAt: string };
-}

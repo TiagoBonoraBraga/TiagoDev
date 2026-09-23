@@ -8,24 +8,23 @@ interface CustomInputProps {
     value: string;
     placeholder?: string;
     setValue: (value: string) => void;
+    /** Classes extras (ex.: pr-10 para abrir espaço a um ícone sobreposto) */
+    className?: string;
 }
 
-export default function CustomInput({ id, type, onChange, name, value, placeholder, setValue }: CustomInputProps) {
+export default function CustomInput({ id, type, onChange, name, value, placeholder, setValue, className = '' }: CustomInputProps) {
     return (
-        <>
-            <input
-                className="flex justify-center items-center w-auto py-2 ss:w-64 border-blue-200 text-blue-200  leading-tight shadow-md appearance-none border rounded focus:outline-none focus:shadow-outline placeholder:text-xs placeholder:p-4"
-                id={id}
-                value={value}
-                name={name}
-                type={type}
-                onChange={(e) => {
-                    setValue(e.target.value);
-                    onChange && onChange(e);
-                  }}
-                placeholder={placeholder}
-
-            />
-        </>
+        <input
+            className={`w-full rounded-lg border border-line bg-paper-soft px-3.5 py-2.5 text-sm text-ink shadow-sm transition placeholder:text-muted/70 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 ${className}`.trim()}
+            id={id}
+            value={value}
+            name={name}
+            type={type}
+            onChange={(e) => {
+                setValue(e.target.value);
+                onChange && onChange(e);
+            }}
+            placeholder={placeholder}
+        />
     )
 }

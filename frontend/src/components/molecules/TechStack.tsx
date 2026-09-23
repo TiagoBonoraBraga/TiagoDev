@@ -83,7 +83,7 @@ export default function TechStack() {
       <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
         <p className="font-mono text-xs tracking-wider text-accent">{'// stack'}</p>
         <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-ink md:text-3xl">
-          Tecnologias que eu uso
+          Tecnologias 
         </h2>
 
         <div className="mt-10 flex flex-col gap-10">

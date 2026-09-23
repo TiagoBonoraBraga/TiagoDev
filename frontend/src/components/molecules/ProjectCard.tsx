@@ -5,11 +5,10 @@ import type { Project } from '@/types'
 
 interface ProjectCardProps {
   project: Project
-  tag?: string
   onSelect: (project: Project) => void
 }
 
-export default function ProjectCard({ project, tag, onSelect }: ProjectCardProps) {
+export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
   const liveUrl = resolveLiveUrl(project)
 
   return (
@@ -30,9 +29,11 @@ export default function ProjectCard({ project, tag, onSelect }: ProjectCardProps
       </button>
 
       <div className="flex flex-1 flex-col p-5">
-        <span className="inline-flex w-fit rounded-full bg-accent/10 px-2.5 py-1 font-mono text-[11px] tracking-wide text-accent">
-          {tag}
-        </span>
+        {project.tag && (
+          <span className="inline-flex w-fit rounded-full bg-accent/10 px-2.5 py-1 font-mono text-[11px] tracking-wide text-accent">
+            {project.tag}
+          </span>
+        )}
         <h3 className="mt-3 font-display text-lg font-semibold text-ink">
           {project.title}
         </h3>
